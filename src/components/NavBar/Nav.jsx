@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav
       className={`p-4 bg-[#FFFFFF] text-neutral-900  flex border-b-2 border-neutral-200 justify-between items-center ${
-        darkMode ? "bg-neutral-900 text-neutral-300" : "bg-blue-600"
+        darkMode ? "bg-neutral-900 text-neutral-300" : "bg-[#FFFFFF]"
       }`}>
           
               <img src={img} className="object-cover rounded-full w-12 h-12" alt="Logo"/>
