@@ -1,25 +1,21 @@
-import { Wallet, Coins, HandCoins, EarthLock} from "lucide-react";
+import { Wallet, Coins, HandCoins, EarthLock } from "lucide-react";
 import React from "react";
-import img from "../assets/walletcon.jpeg"
-import img1 from "../assets/drccoin.jpeg";
-import img2 from "../assets/telexcoin.jpeg";
-import img3 from "../assets/network.jpeg";
+
 import AnimateItem from "../components/AnimationItem";
 import BlurEffect from "../components/BlurEffect";
 
 const Section2 = () => {
   return (
-    <main className="md:my-10 my-5 py-10 md:py-20 flex dark:bg-neutral-950 justify-center flex-col items-center w-full">
-      <div className="mt-10 lg:w-[100vw] gap-6 w-full px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+    <main className="md:my-10 my-5 py-10 md:py-20 flex bg-neutral-400 dark:bg-neutral-950 justify-center flex-col items-center w-full">
+      <div className="mt-10 lg:w-[100vw] gap-6 w-full px-4 mg:px-6 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
         <AnimateItem
           direction="top"
           delay={0.1}
           className="lg:direction-left md:direction-right sm:direction-bottom">
-          <div className=" flex items-center justify-around ">
-            <div
-              className="w-20 h-20  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  bg-contain bg-center"
-              style={{ backgroundImage: `url(${img})` }} // Use `banner.src` when imported
-            ></div>
+          <div className=" flex items-center justify-between md:justify-around">
+            <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
+              <Wallet className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+            </div>
 
             <div className="flex items-start flex-col">
               <h2 className="font-bold text-md md:text-lg text-center  leading-[55px]  lg:leading-normal bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] to-neutral-500 dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text font-orbitron text-transparent">
@@ -35,11 +31,10 @@ const Section2 = () => {
           direction="left"
           delay={0.2}
           className="lg:direction-bottom md:direction-top sm:direction-right">
-          <div className=" flex items-center justify-around ">
-            <div
-              className="w-20 h-20 dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  bg-contain bg-center"
-              style={{ backgroundImage: `url(${img1})` }} // Use `banner.src` when imported
-            ></div>
+          <div className=" flex items-center justify-between md:justify-around ">
+            <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
+              <Coins className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+            </div>
 
             <div className="flex items-start flex-col">
               <h2 className="font-bold text-md md:text-lg text-center   leading-[55px]  lg:leading-normal bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] to-neutral-500 dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text font-orbitron text-transparent">
@@ -55,11 +50,10 @@ const Section2 = () => {
           direction="right"
           delay={0.3}
           className="lg:direction-right md:direction-left sm:direction-top">
-          <div className=" flex items-center justify-around ">
-            <div
-              className="w-20 h-20 shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]   rounded-md  bg-contain bg-center"
-              style={{ backgroundImage: `url(${img2})` }} // Use `banner.src` when imported
-            ></div>
+          <div className=" flex items-center justify-between md:justify-around">
+            <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
+              <HandCoins className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+            </div>
 
             <div className="flex items-start flex-col">
               <h2 className="font-bold text-md md:text-lg text-center   leading-[55px]  lg:leading-normal bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] to-neutral-500 dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text font-orbitron text-transparent">
@@ -76,11 +70,10 @@ const Section2 = () => {
           direction="bottom"
           delay={0.4}
           className="lg:direction-top md:direction-bottom sm:direction-left">
-          <div className=" flex items-center justify-around ">
-            <div
-              className="w-20 h-20  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  bg-contain bg-center"
-              style={{ backgroundImage: `url(${img3})` }} // Use `banner.src` when imported
-            ></div>
+          <div className=" flex items-center justify-between md:justify-around">
+            <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
+              <EarthLock className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+            </div>
 
             <div className="flex items-start flex-col">
               <h2 className="font-bold md:text-lg text-md text-center   leading-[55px]  lg:leading-normal bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] to-neutral-500 dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text font-orbitron text-transparent">
@@ -97,6 +90,6 @@ const Section2 = () => {
       />
     </main>
   );
-}
+};
 
-export default Section2
+export default Section2;

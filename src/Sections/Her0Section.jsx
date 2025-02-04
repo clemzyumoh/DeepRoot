@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Her0Section = () => {
   return (
-    <motion.main className="flex justify-center z-10 relative flex-col  mt-24 lg:mt-16  items-center mb-20">
+    <motion.main className="flex justify-center z-10 relative flex-col  mt-[100px] lg:mt-24  items-center mb-20">
       <div
-        className="w-full h-48 md:h-[500px] lg:min-h-full  bg-cover bg-center mx-2"
+        className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover bg-center mx-2"
         style={{ backgroundImage: `url(${banner})` }}></div>
 
       {/* Heading */}
@@ -42,10 +42,10 @@ const Her0Section = () => {
         NEW-LEVEL OF BLOCKCHAIN NETWORK
       </p> */}
       <AnimatedText
-        text=" FROM IMPOSSIBLE TO POSSIBLE - A PLATFORM FOR INNOVATIVE APPS AND THE NEW-LEVEL OF BLOCKCHAIN NETWORK"
+        text=" FROM IMPOSSIBLE TO POSSIBLE - A PLATFORM FOR INNOVATIVE AND THE NEW-LEVEL OF BLOCKCHAIN NETWORK."
         animation="typing"
         as="p"
-        className=" md:text-xl text-sm font-sans md:tracking-wide text-center my-5 lg:w-[48vw] md:mx-10 mx-5 md:w-[90vw]  "
+        className=" md:text-xl text-sm font-sans tracking-wide md:tracking-wide text-center w-[90vw] my-10 lg:w-[60vw] leading-loose mx-2 md:px-5 md:w-[100vw]  "
       />
 
       {/* Button */}

@@ -202,8 +202,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           : "bg-neutral-300 text-neutral-900"
       }`}>
       {/* Logo & Nav Links */}
-      <div className="flex items-center space-x-5">
-        <img src={img} className="rounded-full min-w-16 h-16" alt="Logo" />
+      <div className="flex items-center  space-x-5">
+        <div className="w-16  h-16 overflow-hidden rounded-full">
+          <img
+            src={img}
+            className="w-full h-full object-cover scale-150 "
+            alt="Logo"
+          />
+        </div>
+        <h3 className="hidden md:flex font-bold text-md md:text-lg  bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] to-neutral-500 dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text font-orbitron text-transparent">
+          DEEPROOTS
+        </h3>
 
         {/* Navbar Links (Desktop) */}
         <div className="hidden  space-x-6">

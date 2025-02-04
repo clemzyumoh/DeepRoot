@@ -39,7 +39,7 @@ const AnimatedText = ({
       className="inline-block">
       {animation === "typing" || animation === "wave" ? (
         <Tag className={className}>
-          {text.split("").map((char, i) => (
+          {text.split(" ").map((word, i) => (
             <motion.span
               key={i}
               variants={textVariants[animation]}
@@ -47,8 +47,8 @@ const AnimatedText = ({
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
-              className="inline-block">
-              {char === " " ? "\u00A0" : char} {/* Preserve spaces */}
+              className="inline-block mr-1">
+              {word}
             </motion.span>
           ))}
         </Tag>
