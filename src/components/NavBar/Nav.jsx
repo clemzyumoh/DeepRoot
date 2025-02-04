@@ -299,7 +299,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                             key={index}
                             className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center  transition duration-300">
                             <div className="flex items-center mr-5 gap-3">
-                              <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover:text-gray-900 group-hover:bg-white  duration-300">
+                              <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white  duration-300">
                                 {subMenu?.icon}
                               </div>
                             </div>

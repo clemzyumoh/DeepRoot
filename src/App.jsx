@@ -3,7 +3,7 @@ import Navbar from "./components/NavBar/Nav";
 import "./index.css";
 import BlurEffect from "./components/BlurEffect";
 import Her0Section from "./Sections/Her0Section";
-//import Section2 from "./Sections/Section2";
+import Section2 from "./Sections/Section2";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -30,7 +30,7 @@ function App() {
         />
       </div>
       <Her0Section />
-      
+      <Section2/>
     </main>
   );
 }
