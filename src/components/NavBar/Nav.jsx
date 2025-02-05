@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           icon: <Users size={16} />,
         },
         {
-          name: "Treands",
+          name: "Treads",
           desc: "Treads Description",
           icon: <Briefcase size={16} />,
         },
@@ -66,17 +66,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       subMenu: [
         {
           name: "Tech",
-          desc: "Overview Description",
+          desc: "Tech Description",
           icon: <Cpu size={16} />,
         },
         {
-          name: "Startups",
-          desc: "Treads Description",
+          name: "Start-ups",
+          desc: "Start-ups Description",
           icon: <ListRestart size={16} />,
         },
         {
           name: "Research",
-          desc: "Insights Description",
+          desc: "Research Description",
           icon: <BookCheck size={16} />,
         },
       ],
@@ -87,17 +87,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       subMenu: [
         {
           name: "Development",
-          desc: "Overview Description",
+          desc: "Development Description",
           icon: <Blocks size={16} />,
         },
         {
           name: "Security",
-          desc: "Treads Description",
+          desc: "Security Description",
           icon: <Lock size={16} />,
         },
         {
           name: "Integration",
-          desc: "Insights Description",
+          desc: "Integration Description",
           icon: <Workflow size={16} />,
         },
       ],
@@ -108,17 +108,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       subMenu: [
         {
           name: "Event",
-          desc: "Overview Description",
+          desc: "Event Description",
           icon: <CalendarCheck size={16} />,
         },
         {
           name: "Meetups",
-          desc: "Treads Description",
+          desc: "Meetings Description",
           icon: <Component size={16} />,
         },
         {
           name: "Partners",
-          desc: "Insights Description",
+          desc: "Partners Description",
           icon: <Handshake size={16} />,
         },
       ],
@@ -129,17 +129,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       subMenu: [
         {
           name: "Forum",
-          desc: "Overview Description",
+          desc: "Forum Description",
           icon: <Strikethrough size={16} />,
         },
         {
           name: "Support",
-          desc: "Treads Description",
+          desc: "Support Description",
           icon: <HeartHandshake size={16} />,
         },
         {
           name: "Resoures",
-          desc: "Insights Description",
+          desc: "Resources Description",
           icon: <LucideShieldPlus size={16} />,
         },
       ],
@@ -297,7 +297,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       onAnimationComplete={(def) => {
                         if (def === "exit") setDropdownOpen(null);
                       }}
-                      className={`absolute top-[5rem] p-[15px] rounded-[6px] flex items-center justify-center w-fit backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
+                      className={`absolute top-[5rem] p-[15px] rounded-[6px] flex items-center justify-center  w-fit backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
                         dropdownOpen === index
                           ? "opacity-100 visible pointer-events-auto delay-1000"
                           : "opacity-0 invisible pointer-events-none"

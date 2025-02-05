@@ -4,6 +4,8 @@ import "./index.css";
 import BlurEffect from "./components/BlurEffect";
 import Her0Section from "./Sections/Her0Section";
 import Section2 from "./Sections/Section2";
+import Section3 from "./Sections/Section3";
+import Section4 from "./Sections/Section4";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -21,7 +23,7 @@ function App() {
     }
   }, [darkMode]);
   return (
-    <main className="overflow-x-hidden relative bg-neutral-300 dark:bg-[#1c1d20] dark:text-neutral-200 ">
+    <main className="overflow-hidden relative bg-neutral-300 dark:bg-[#1c1d20] dark:text-neutral-200 ">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <div className="z-0 text-lg">
         <BlurEffect
@@ -30,7 +32,9 @@ function App() {
         />
       </div>
       <Her0Section />
-      <Section2/>
+      <Section2 />
+      <Section3 />
+      <Section4/>
     </main>
   );
 }
