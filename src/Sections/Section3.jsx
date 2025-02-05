@@ -48,7 +48,7 @@ const Section3 = () => {
             Manage Asset - SEED - FOUNDATION -refferal- GAMING & MORE
           </p>
           <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
-            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
+            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out  rounded-lg  text-lg  tracking-wider ">
               Activate Wallet
             </button>
           </div>
