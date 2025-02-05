@@ -5,7 +5,8 @@ import BlurEffect from "./components/BlurEffect";
 import Her0Section from "./Sections/Her0Section";
 import Section2 from "./Sections/Section2";
 import Section3 from "./Sections/Section3";
-//import Section4 from "./Sections/Section4";
+import Section4 from "./Sections/Section4";
+import Section5 from "./Sections/Section5";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -28,13 +29,14 @@ function App() {
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:top-0 lg:right-0 bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-60 h-60 absolute lg:top-0 lg:right-0 bg-[#0085a8] blur-[250px] rounded-full"
         />
       </div>
       <Her0Section />
       <Section2 />
       <Section3 />
-      
+      <Section4 />
+      <Section5/>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import AnimateItem from "../components/AnimationItem";
 import AnimatedText from "../components/AnimationText";
 import { GoRocket } from "react-icons/go";
-import img from "../assets/telexcoin.jpeg";
+import img from "../assets/Section4-img.jpeg";
 import img1 from "../assets/group.png";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
@@ -28,10 +28,10 @@ const Section4 = () => {
               text=" Welcome to TelexCoin DEX: Your Gateway to the future of Finance"
               animation="fade"
               as="h1"
-              className="font-extrabold text-2xl text-center lg:text-start lg:text-5xl  mb-10  lg:leading-normal  bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
+              className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal  bg-gradient-to-r from-[#0085a8] dark:via-[#0085a8] to-[#a45204] bg-clip-text font-orbitron text-transparent"
             />
             <AnimateItem direction="right" delay={0.2}>
-              <div className="w-full lg:hidden flex ">
+              <div className="w-full  lg:hidden flex ">
                 <img src={img} alt="" className="rounded-2xl" />
               </div>
             </AnimateItem>
@@ -60,11 +60,11 @@ const Section4 = () => {
       <div className="z-0 text-lg">
         <BlurEffect
           color="#ad1aa0"
-          className="w-72 h-72 absolute top-150 right-200 bg-[#ad1aa0] dark:bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-72 h-72 absolute top-150 right-200 bg-[#ad1aa0] dark:bg-[#0085a8] blur-[250px] rounded-full"
         />
       </div>
 
-      <div className="">
+      <div className="hidden">
         <div className=""></div>
         <div className=" grid my-10 lg:grid-cols-1 md:gap-10 gap-6 md:grid-cols-2 grid-cols-1">
           <div className="flex justify-start items-start w-[35vw] dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8]   backdrop-blur-md  transition-opacity bg-transparent  rounded-2xl">

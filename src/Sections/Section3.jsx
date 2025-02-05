@@ -1,7 +1,7 @@
 import AnimateItem from "../components/AnimationItem";
 import AnimatedText from "../components/AnimationText";
 import { GoRocket } from "react-icons/go";
-import img from "../assets/Section2banner.jpeg";
+import img from "../assets/Section3-img.jpeg";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { GiTrophyCup } from "react-icons/gi";
@@ -14,14 +14,14 @@ import Card from "../components/Card";
 //import BookSlider from "../components/Slider";
 const Section3 = () => {
   return (
-    <main className="my-20 relative md:px-10 lg:px-14 px-5">
-      <div className="flex justify-center flex-col md:flex-row items-start w-full">
-        <div className="flex justify-start w-full text- md:items-center lg:items-start lg:text-start items-start flex-col">
+    <main className="my-20 relative md:p-10  p-5">
+      <div className="flex justify-center flex-col md:flex-row items-center w-full">
+        <div className="flex justify-start w-full text- md:items-center lg:ml-10 lg:items-start lg:text-start items-start flex-col">
           <AnimatedText
-            text=" Unlock Exclusive Benefits & Be Part of the Deep Roots Revolution"
+            text=" THE ADDRESS WALLET"
             animation="fade"
             as="h1"
-            className="font-extrabold text-2xl text-center lg:text-start lg:text-5xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#0085a8] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
           />
           <div className="w-full  lg:hidden my-10">
             <img src={img} alt="" className="rounded-lg" />
@@ -40,18 +40,23 @@ const Section3 = () => {
               className="font-sans ml-3 text-lg"
             />
           </div>
-          <p className=" font-sans mt-5 lg:w-[500px] lg:text-lg md:w-[70vw]">
-            Activate your wallet now by staking 1 DRC and earn 12% annual
-            rewards. Start building your passive income today with Deep Roots.
+          <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]  ">
+            Warp Around - 8 Layers of Dynamic Finance. More Than a Wallet, It's
+            an Earning Machine. Activate & Begin Your Journey to wealth!
           </p>
-          <button className="mt-6 lg:mt-10  md:w-[70vw] px-6 font-orbitron py-3 bg-gradient-to-r from-[#ad1aaf] to-[#0085a8] text-center relative font-bold hover:bg-gradient-to-l from-[#7947df] to-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-2xl w-[80vw] lg:max-w-[30vw] text-lg md:text-3xl md:my-6 tracking-wider ">
-            Learn More...
-          </button>
+          <p className=" font-sans mt-2 lg:w-[500px] md:w-[70vw] ">
+            Manage Asset - SEED - FOUNDATION -refferal- GAMING & MORE
+          </p>
+          <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
+            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
+              Activate Wallet
+            </button>
+          </div>
         </div>
 
         <AnimateItem direction="right" delay={0.2}>
-          <div className="w-full hidden lg:flex">
-            <img src={img} alt="" className="rounded-2xl" />
+          <div className="w-full hidden mr-20 lg:flex">
+            <img src={img} alt="" className="w-full rounded-2xl" />
           </div>
         </AnimateItem>
       </div>
@@ -197,7 +202,7 @@ const Section3 = () => {
         />
       </div>
 
-      <div className="flex-wrap gap-6 grid lg:grid-cols-3 p-3 md:p-10 md:grid-cols-2 grid-cols-1 bg-white mt-10 dark:bg-gray-800 rounded-lg shadow-lg w-full ">
+      <div className="flex-wrap hidden gap-6  lg:grid-cols-3 p-3 md:p-10 md:grid-cols-2 grid-cols-1 bg-white mt-10 dark:bg-gray-800 rounded-lg shadow-lg w-full ">
         <AnimateItem
           delay={0.2}
           direction="left"
