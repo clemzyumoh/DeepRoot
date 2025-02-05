@@ -1,7 +1,7 @@
 import AnimateItem from "../components/AnimationItem";
 import AnimatedText from "../components/AnimationText";
 import { GoRocket } from "react-icons/go";
-import img from "../assets/Section3 img.png";
+import img from "../assets/Section2banner.jpeg";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { GiTrophyCup } from "react-icons/gi";
@@ -9,19 +9,22 @@ import { GiBullseye } from "react-icons/gi";
 import { IoBarChartOutline } from "react-icons/io5";
 import { SiOpenaccess } from "react-icons/si";
 import { IoStarOutline } from "react-icons/io5";
+import { BookOpen, Feather, Star } from "lucide-react";
+import Card from "../components/Card";
+//import BookSlider from "../components/Slider";
 const Section3 = () => {
   return (
     <main className="my-20 relative md:px-10 lg:px-14 px-5">
-      <div className="flex justify-center flex-col md:flex-row items-center w-full">
+      <div className="flex justify-center flex-col md:flex-row items-start w-full">
         <div className="flex justify-start w-full text- md:items-center lg:items-start lg:text-start items-start flex-col">
           <AnimatedText
             text=" Unlock Exclusive Benefits & Be Part of the Deep Roots Revolution"
             animation="fade"
             as="h1"
-            className="font-extrabold text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold text-2xl text-center lg:text-start lg:text-5xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
           />
-          <div className="w-full lg:hidden my-10">
-            <img src={img} alt="" className="" />
+          <div className="w-full  lg:hidden my-10">
+            <img src={img} alt="" className="rounded-lg" />
           </div>
           <div className="flex justify-center  mt-6 items-center">
             <AnimateItem
@@ -37,7 +40,7 @@ const Section3 = () => {
               className="font-sans ml-3 text-lg"
             />
           </div>
-          <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]">
+          <p className=" font-sans mt-5 lg:w-[500px] lg:text-lg md:w-[70vw]">
             Activate your wallet now by staking 1 DRC and earn 12% annual
             rewards. Start building your passive income today with Deep Roots.
           </p>
@@ -45,11 +48,14 @@ const Section3 = () => {
             Learn More...
           </button>
         </div>
-        <div className="w-full hidden lg:flex">
-          <img src={img} alt="" className="" />
-        </div>
+
+        <AnimateItem direction="right" delay={0.2}>
+          <div className="w-full hidden lg:flex">
+            <img src={img} alt="" className="rounded-2xl" />
+          </div>
+        </AnimateItem>
       </div>
-      <div className="">
+      <div className="hidden">
         <div className=""></div>
         <div className=" grid my-10 lg:grid-cols-3 md:gap-10 gap-6 md:grid-cols-2 grid-cols-1">
           <div className="flex justify-start items-start flex-col dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8]  w-fit backdrop-blur-md  transition-opacity bg-transparent px-4 my-6 rounded-2xl">
@@ -153,9 +159,9 @@ const Section3 = () => {
               />
             </div>
             <p className=" my-5">
-                          Total supply of Deep Roots Coin: 26.2 million, distributed over 25 years.
-                          Secure your place now to maximize your rewards.
-                          Limited seats & limited supply-JOIN BEFORE IT'S TOO LATE.
+              Total supply of Deep Roots Coin: 26.2 million, distributed over 25
+              years. Secure your place now to maximize your rewards. Limited
+              seats & limited supply-JOIN BEFORE IT'S TOO LATE.
             </p>
           </div>
           <div className="flex justify-start items-start flex-col dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8]  w-fit backdrop-blur-md  transition-opacity bg-transparent px-4 my-6 rounded-2xl">
@@ -174,17 +180,111 @@ const Section3 = () => {
               />
             </div>
             <p className=" my-5">
-              Complete in the world's biggest referral race & win from the million Pool!.
+              Complete in the world's biggest referral race & win from the
+              million Pool!.
             </p>
           </div>
         </div>
       </div>
+      {/* <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <BookSlider bg="bg-red-500" />
+      </div> */}
 
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
           className="w-60 h-60 absolute lg:top-0 dark:lg:right-0 lg:right-16 bg-neutral-950 dark:bg-[#0085a8] blur-[180px] rounded-full"
         />
+      </div>
+
+      <div className="flex-wrap gap-6 grid lg:grid-cols-3 p-3 md:p-10 md:grid-cols-2 grid-cols-1 bg-white mt-10 dark:bg-gray-800 rounded-lg shadow-lg w-full ">
+        <AnimateItem
+          delay={0.2}
+          direction="left"
+          className=" md:direction-left sm:direction-left">
+          <Card
+            icon={IoStarOutline}
+            iconColor="#ff9f43"
+            title="Referral Rewards."
+            titleColor="#d63031"
+            description="Share your wallet link with friends and split the rewards! your
+              referral link stays active for anyone who joins and activates
+              their wallet. Earn rewards continuosly as your network grows-until
+              the limited token run out."
+          />
+        </AnimateItem>
+
+        <AnimateItem
+          delay={0.2}
+          direction="top"
+          className=" md:direction-right sm:direction-right">
+          <Card
+            icon={IoMdCheckboxOutline}
+            iconColor="#00cec9"
+            title=" Be an Early Bird!"
+            titleColor="#0984e3"
+            description="Join the Foundation as an early supporter and earn loyalty rewards
+              from every project built on the Deep Roots Blockchain. Limited
+              spots available, so act fast!"
+          />
+        </AnimateItem>
+
+        <AnimateItem
+          delay={0.2}
+          direction="right"
+          className="md:direction-left sm:direction-left">
+          <Card
+            icon={SiOpenaccess}
+            iconColor="#f1c40f"
+            title="Exclusive Access"
+            titleColor="#2ecc71"
+            description="Get early access to new features, private events, and token
+              launches. Limited minting opportunities in the first year-SUPPLY
+              IS LIMITED"
+          />
+        </AnimateItem>
+        <AnimateItem
+          delay={0.2}
+          direction="left"
+          className="md:direction-right sm:direction-right">
+          <Card
+            icon={IoBarChartOutline}
+            iconColor="#d63031"
+            title="Manage Your Assets Efficiently"
+            titleColor="#ff9f43"
+            description="  Set up your personal dashboard to easily track assets, monitor
+              earnings, and view rewards.Earn a percentage of every token
+              launched on the Deep Roots blockchain."
+          />
+        </AnimateItem>
+        <AnimateItem
+          delay={0.2}
+          direction="bottom"
+          className="md:direction-left sm:direction-left">
+          <Card
+            icon={GiBullseye}
+            iconColor="#00cec9"
+            title="Don't Miss Out!"
+            titleColor="#0984e3"
+            description=" Total supply of Deep Roots Coin: 26.2 million, distributed over 25
+              years. Secure your place now to maximize your rewards. Limited
+              seats & limited supply-JOIN BEFORE IT'S TOO LATE."
+          />
+        </AnimateItem>
+
+        <AnimateItem
+          delay={0.2}
+          direction="right"
+          className="md:direction-right sm:direction-right ">
+          <Card
+            icon={GiTrophyCup}
+            iconColor="#f1c40f"
+            title="RootOpia World Race Referral DashBoard."
+            titleColor="#2ecc71"
+            description=" Complete in the world's biggest referral race & win from the
+              million Pool!."
+          />
+        </AnimateItem>
       </div>
     </main>
   );

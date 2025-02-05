@@ -90,7 +90,7 @@ const Section2 = () => {
       </div>
       <BlurEffect
         color="#ad1aa0"
-        className="w-60 h-60 absolute lg:bottom-16 lg:left-0 bg-[#ad1aa0] blur-[180px] rounded-full"
+        className="w-60 h-60 absolute lg:bottom-16 lg:left-0 bg-[#ad1aa0] blur-[80px] md:blur-[180px] hidden lg:flex rounded-full"
       />
     </main>
   );
