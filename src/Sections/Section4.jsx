@@ -23,10 +23,10 @@ const Section4 = () => {
             as="h1"
             className="font-extrabold text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
           />
-          <div className="w- hidden dark:flex dark:lg:hidden lg:hidden my-10">
+          <div className="w- hidden dark:flex dark:lg:hidden lg:hidden my-5">
             <img src={img} alt="" className="" />
           </div>
-          <div className="w-full lg:hidden flex dark:lg:hidden dark:hidden my-10">
+          <div className="w-full lg:hidden flex dark:lg:hidden dark:hidden my-5">
             <img src={img1} alt="" className="" />
           </div>
           <div className="flex justify-center  mt-6 items-center">
