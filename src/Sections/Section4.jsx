@@ -1,8 +1,8 @@
 import AnimateItem from "../components/AnimationItem";
 import AnimatedText from "../components/AnimationText";
-import { GoRocket } from "react-icons/go";
-import img from "../assets/Section4-img.jpeg";
-import img1 from "../assets/group.png";
+//import { GoRocket } from "react-icons/go";
+import img from "../assets/section4-img.jpeg";
+//import img1 from "../assets/group.png";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { IoDiamond } from "react-icons/io5";
