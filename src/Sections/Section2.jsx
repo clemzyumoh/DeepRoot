@@ -16,7 +16,9 @@ const Section2 = () => {
           className="lg:direction-left md:direction-right sm:direction-bottom">
           <div className=" flex items-center cursor-pointer justify-center ">
             <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
-              <Wallet className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              <a href="/#" target="_blank">
+                <Wallet className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              </a>
             </div>
 
             <div className="flex items-start w-[80vw] md:w-[60vw] ml-6 flex-col">
@@ -35,7 +37,9 @@ const Section2 = () => {
           className="lg:direction-bottom cursor-pointer md:direction-top sm:direction-right">
           <div className=" flex items-center cursor-pointer justify-center">
             <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
-              <SiDogecoin className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              <a href="/#" target="_blank">
+                <SiDogecoin className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              </a>
             </div>
 
             <div className="flex items-start w-[80vw] md:w-[60vw] ml-6 flex-col">
@@ -43,7 +47,7 @@ const Section2 = () => {
                 Get DRC Token (Deeproots Coin):
               </h2>
               <p className="font-sans text-sm w-full">
-                Limited Supply of 26.2 million coins over 25 years.
+                Limited Supply, Distributed Over 25 Years - Here to Stay.
               </p>
             </div>
           </div>
@@ -54,7 +58,9 @@ const Section2 = () => {
           className="lg:direction-right md:direction-left sm:direction-top">
           <div className=" flex items-center cursor-pointer justify-center ">
             <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
-              <TbCoinTaka className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              <a href="/#" target="_blank">
+                <TbCoinTaka className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              </a>
             </div>
 
             <div className="flex items-start w-[80vw] md:w-[60vw] ml-6 flex-col">
@@ -74,7 +80,9 @@ const Section2 = () => {
           className="lg:direction-top md:direction-bottom sm:direction-left">
           <div className=" flex items-center cursor-pointer  justify-center">
             <div className=" dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
-              <LiaNetworkWiredSolid className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              <a href="/#" target="_blank">
+                <LiaNetworkWiredSolid className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+              </a>
             </div>
 
             <div className="flex items-start w-[80vw] md:w-[60vw] ml-6 flex-col">
@@ -82,7 +90,7 @@ const Section2 = () => {
                 DeepRoots Network.
               </h2>
               <p className="font-sans w-full text-sm">
-                Fast, secure, low-cost, hybrid blockchain.
+                The First Truly Dynamic, Scalable, and Borderless Blockchain.
               </p>
             </div>
           </div>

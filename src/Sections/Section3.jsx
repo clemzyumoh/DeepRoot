@@ -21,7 +21,7 @@ const Section3 = () => {
             text=" THE ADDRESS WALLET"
             animation="fade"
             as="h1"
-            className="font-extrabold text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#0085a8] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#0085a8]  to-orange-400 bg-clip-text font-orbitron text-transparent"
           />
           <div className="w-full  lg:hidden my-10">
             <img src={img} alt="" className="rounded-lg" />
@@ -37,18 +37,23 @@ const Section3 = () => {
               text=" Start Earning Today!"
               animation="fade"
               as="h4"
-              className="font-sans ml-3 text-lg"
+              className="font-sans font-bold text-[#0085a8] ml-3 text-lg"
             />
           </div>
           <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]  ">
-            Warp Around - 8 Layers of Dynamic Finance. More Than a Wallet, It's
-            an Earning Machine. Activate & Begin Your Journey to wealth!
+            <span className="font-orbitron mb-5 font-bold">
+              Warp Around Wealth -- 8 Layers of Dynamic Finance.
+            </span>{"  "}
+            More Than a Wallet, It's an Earning Machine. Activate & Begin Your
+            Journey to wealth!
           </p>
           <p className=" font-sans mt-2 lg:w-[500px] md:w-[70vw] ">
-            Manage Asset - SEED - FOUNDATION -refferal- GAMING & MORE
+            <span className="font-orbitron font-bold">
+              Manage Asset | SEED | FOUNDATION | Refferal | Gaming & More.
+            </span>{" "}
           </p>
           <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
-            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out  rounded-lg  text-lg  tracking-wider ">
+            <button className="mt-6 font-bold lg:mt-10 bg-gradient-to-r from-[#0085a8] to-orange-400 mr-6 px-6 font-orbitron py-3 text-center hover:bg-none hover:border-2 dark:border-[#0085a8] border-[#0085a8]  dark:hover:text-[#0085a8] transition-all   hover:ease-in-out  rounded-lg  text-lg  tracking-wider ">
               Activate Wallet
             </button>
           </div>

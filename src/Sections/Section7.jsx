@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import AnimatedText from '../components/AnimationText';
 const data = [
   {
     title: "Understand DeepRoots",
@@ -34,9 +34,14 @@ const data = [
 const Section7 = () => {
       const [openIndex, setOpenIndex] = useState(null);
   return (
-    <section className="max-w-4xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-6">About DeepRoots</h2>
-      <div className="space-y-4">
+    <section className="max-w-4xl   mx-auto py-12 px-4">
+      <AnimatedText
+        text=" ABOUT DEEPROOTS"
+        animation="fade"
+        as="h1"
+        className="font-extrabold  text-2xl text-center lg:text-start lg:text-3xl   my-5 lg:leading-normal mb-10 bg-gradient-to-r from-[#0085a8]  to-orange-400 bg-clip-text font-orbitron text-transparent"
+      />
+      <div className="md:space-y-6 space-y-4 ">
         {data.map((item, index) => (
           <div key={index} className="border border-[#0085a8] rounded-lg">
             <button

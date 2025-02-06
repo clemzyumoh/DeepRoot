@@ -28,7 +28,7 @@ const Section8 = () => {
               text=" ROOTOPIA RACE"
               animation="fade"
               as="h1"
-              className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal  bg-gradient-to-r from-[#0085a8] dark:via-[#0085a8] to-[#a45204] bg-clip-text font-orbitron text-transparent"
+              className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal  bg-gradient-to-r from-[#0085a8]  to-[#a45204] bg-clip-text font-orbitron text-transparent"
             />
             <AnimateItem direction="right" delay={0.2}>
               <div className="w-full  lg:hidden flex ">
@@ -45,7 +45,7 @@ const Section8 = () => {
             you ready to claim your victory?
           </p>
           <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
-            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
+            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:scale-105 hover:text-[#0085a8] transition-all   hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
               Play Now
             </button>
           </div>

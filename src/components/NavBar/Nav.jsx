@@ -148,27 +148,27 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const navLinks = [
     {
       name: "Discover",
-      icon: <Users size={16} />,
+      icon: <Users size={25} />,
       subMenu: ["Overview", "Trends", "Insights"],
     },
     {
       name: "Innovate",
-      icon: <Briefcase size={16} />,
+      icon: <Briefcase size={25} />,
       subMenu: ["Tech", "Startups", "Research"],
     },
     {
       name: "Solution",
-      icon: <Code size={16} />,
+      icon: <Code size={25} />,
       subMenu: ["Development", "Security", "Integration"],
     },
     {
       name: "Network",
-      icon: <Network size={16} />,
+      icon: <Network size={25} />,
       subMenu: ["Events", "Meetups", "Partners"],
     },
     {
       name: "Community",
-      icon: <Users size={16} />,
+      icon: <Users size={25} />,
       subMenu: ["Forum", "Support", "Resources"],
     },
   ];
@@ -363,7 +363,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <ChevronDown size={14} className="ml-2" />
           </button>
 
-          <div className="absolute right-0 mt-2 w-52 bg-white  dark:border-none dark:bg-neutral-800 shadow-lg rounded hidden group-hover:block">
+          <div className="absolute right-0 mt-2 w-52 bg-white z-50 dark:border-none dark:bg-neutral-800 shadow-lg rounded hidden group-hover:block">
             {[
               "English",
               "Spanish",
@@ -395,17 +395,25 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             animate={{ x: 0 }} // Slide in to the screen
             exit={{ x: "-100%" }} // Slide back when closed
             transition={{ type: "spring", stiffness: 80, damping: 15 }}
-            className="lg:hidden absolute top-24 left-0 w-full h-screen bg-[#0085a8] text-white p-4 space-y-4">
+            className="lg:hidden absolute top-24 left-0 w-full h-screen text-neutral-950 pt-5  dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4">
             {navLinks.map((item, index) => (
               <motion.div key={index} className="relative">
                 <button
-                  className="flex items-center justify-between w-full md:my-10 text-center px-4 py-2 hover:bg-neutral-500 rounded transition-all"
+                  className="flex items-center justify-between w-full text-[#0085a8] font-orbitron font-bold md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8]  rounded transition-all"
                   onClick={() =>
                     setMobileDropdown(mobileDropdown === index ? null : index)
                   }>
                   {item.icon}
                   {item.name}
-                  <ChevronDown size={14} />
+                  <ChevronDown
+                    size={25}
+                    className={`cursor-pointer transform transition-transform ${
+                      mobileDropdown === index ? "rotate-180" : "rotate-0"
+                    }`}
+                    onClick={() =>
+                      setMobileDropdown(mobileDropdown === index ? null : index)
+                    }
+                  />
                 </button>
 
                 {mobileDropdown === index && (
@@ -420,7 +428,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     {item.subMenu.map((subItem, i) => (
                       <button
                         key={i}
-                        className="block w-full text-left px-4 py-2 bg-neutral-700 hover:bg-neutral-600 rounded transition-all">
+                        className="block w-full text-left px-4 py-2 bg-neutral-400 text-neutral-950 hover:scale-105 dark:bg-neutral-700 dark:text-neutral-200 font-orbitron hover:bg-neutral-600 rounded transition-all">
                         {subItem}
                       </button>
                     ))}

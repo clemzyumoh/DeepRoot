@@ -6,11 +6,13 @@ import img from "../assets/section4-img.jpeg";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { IoDiamond } from "react-icons/io5";
+import { FaSackDollar } from "react-icons/fa6";
 import { IoGlobe } from "react-icons/io5";
 import { FaGripfire } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { LuSiren } from "react-icons/lu";
 import { FaHandshake } from "react-icons/fa";
+import { TbCash, TbPigMoney } from "react-icons/tb";
 
 const Section4 = () => {
   return (
@@ -25,10 +27,10 @@ const Section4 = () => {
         <div className=" flex justify-center lg:ml-16 items-start w-full  flex-col">
           <div className=" mt-6 ">
             <AnimatedText
-              text=" Welcome to TelexCoin DEX: Your Gateway to the future of Finance"
+              text=" TelexCoin DEX: Unlock the future of Finance"
               animation="fade"
               as="h1"
-              className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal  bg-gradient-to-r from-[#0085a8] dark:via-[#0085a8] to-[#a45204] bg-clip-text font-orbitron text-transparent"
+              className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal bg-gradient-to-r dark:bg-gradient-to-r from-[#0085a8] dark:via-[#ad1] dark:to-amber-400 via-blue-900 to-amber-600 bg-clip-text font-orbitron text-transparent"
             />
             <AnimateItem direction="right" delay={0.2}>
               <div className="w-full  lg:hidden flex ">
@@ -36,22 +38,44 @@ const Section4 = () => {
               </div>
             </AnimateItem>
             <AnimatedText
-              text=" Exclusive Early Access to DRC Tokens"
+              text=" Get Early Access to DRC Tokens!"
               animation="fade"
               as="h4"
               className="font-orbitron font-bold text-xl  leading-normal w-full"
             />
           </div>
-          <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]">
-            Buy DRC tokens during the ICO-limited supply. Maximize rewards by
-            gettings in early.
+          <div className="flex items-center  my-4">
+            <AnimateItem
+              direction="top"
+              delay={0.1}
+              className="lg:direction-left   md:direction-right sm:direction-bottom">
+              <FaSackDollar className="w-10 h-10 mr-4 dark:text-amber-600 text-[#0085a8]" />
+            </AnimateItem>
+            <p className="  lg:w-[500px]  font-orbitron md:w-[70vw]">
+              <span className="font-orbitron text-lg">
+                Seed, Earn, and Grow
+              </span>{" "}
+              - Pool
+            </p>
+          </div>
+
+          <p className=" font-sans my-2 lg:w-[500px] md:w-[70vw] ">
+            <span className=" text-lg ">
+              Liquidity | Exclusive Podcast | FOUNDATION | Shared Rewards.
+            </span>{" "}
+          </p>
+          <p className=" font-sans mt-2 flex items-center lg:w-[500px] md:w-[70vw] ">
+            <AnimateItem
+              direction="top"
+              delay={0.1}
+              className="lg:direction-left  md:direction-right sm:direction-bottom">
+              <FaGripfire className="w-10 h-10 dark:text-amber-600 text-[#0085a8]" />
+            </AnimateItem>
+            <span className="text-lg ">The Hub for Trading & Connection.</span>{" "}
           </p>
           <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
-            <button className="mt-6 lg:mt-10  mr-6 px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
-              Learn More...
-            </button>
-            <button className="mt-6 lg:mt-10   px-6 font-orbitron py-3 text-center border-2 dark:border-[#0085a8] border-[#0085a8] hover:border-[#ad1aa0] hover:text-[#ad1aa0] dark:hover:text-[#0085a8] transition-all hover:delay-1000  hover:ease-in-out text-white rounded-lg  text-lg  tracking-wider ">
-              Documentation
+            <button className="mt-6 font-bold lg:mt-10 bg-gradient-to-r from-[#0085a8] via-[#ad1]/60 dark:via-[#ad1]/70 dark:to-amber-600 to-amber-600 mr-6 px-6 font-orbitron py-3 text-center hover:bg-none hover:border-2 dark:border-[#0085a8] border-[#0085a8]  dark:hover:text-[#0085a8] transition-all   hover:ease-in-out  rounded-lg  text-lg  tracking-wider ">
+              JOIN & EARN
             </button>
           </div>
         </div>
