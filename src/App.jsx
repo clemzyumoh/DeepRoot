@@ -11,6 +11,7 @@ import Section8 from "./Sections/Section8";
 import Section6 from "./Sections/Section6";
 import Section7 from "./Sections/Section7";
 import ComparisonSection from "./Sections/Section9";
+import Section10 from "./Sections/Section10";
 // //import Section9 from "./Sections/Section9";
 // //import ComparisonSection from "./Sections/Section9";
 
@@ -48,6 +49,7 @@ import ComparisonSection from "./Sections/Section9";
 //       <Section7/>
 //       <Section8 />
 // <ComparisonSection/>
+
 //     </main>
 //   );
 // }
@@ -95,6 +97,7 @@ function App() {
       <Section7 />
       <Section8 />
       <ComparisonSection />
+      <Section10/>
     </main>
   );
 }

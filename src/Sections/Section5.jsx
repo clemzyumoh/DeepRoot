@@ -1,6 +1,6 @@
 import AnimatedText from "../components/AnimationText";
 import { ChevronRight } from "lucide-react";
-import img from "../assets/asset.jpeg"
+import img from "../assets/asset5.jpeg"
 import AnimateItem from "../components/AnimationItem";
 const Section5 = () => {
   return (
