@@ -1,7 +1,7 @@
 import AnimateItem from "../components/AnimationItem";
 import AnimatedText from "../components/AnimationText";
 import { GoRocket } from "react-icons/go";
-import img from "../assets/Section3-img.jpeg";
+import img from "../assets/section3-img.jpeg";
 import BlurEffect from "../components/BlurEffect";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { GiTrophyCup } from "react-icons/gi";
@@ -9,7 +9,7 @@ import { GiBullseye } from "react-icons/gi";
 import { IoBarChartOutline } from "react-icons/io5";
 import { SiOpenaccess } from "react-icons/si";
 import { IoStarOutline } from "react-icons/io5";
-import { BookOpen, Feather, Star } from "lucide-react";
+//import { BookOpen, Feather, Star } from "lucide-react";
 import Card from "../components/Card";
 //import BookSlider from "../components/Slider";
 const Section3 = () => {
