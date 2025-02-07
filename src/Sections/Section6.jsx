@@ -4,7 +4,7 @@ import AnimatedText from '../components/AnimationText';
 
 const Section6 = () => {
   return (
-    <div className='flex justify-center items-center flex-col my-20'>
+    <div className='flex justify-center  items-center flex-col my-20'>
       <AnimatedText
         text="DeepRoots Use Cases - Game-Changing Features"
         animation="fade"

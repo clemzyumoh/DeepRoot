@@ -49,19 +49,19 @@ const Section4 = () => {
               direction="top"
               delay={0.1}
               className="lg:direction-left   md:direction-right sm:direction-bottom">
-              <FaSackDollar className="w-10 h-10 mr-4 dark:text-amber-600 text-[#0085a8]" />
+              <FaSackDollar className="w-8 h-7 mr-4 dark:text-amber-600 text-[#0085a8]" />
             </AnimateItem>
-            <p className="  lg:w-[500px]  font-sans md:w-[70vw]">
-              <span className="text-lg">
+            <p className="  lg:w-[500px] font-bold  font-sans md:w-[70vw]">
+              <span className="text-lg md:text-xl">
                 Seed, Earn, and Grow
               </span>{" "}
-              - Pool
+              
             </p>
           </div>
 
-          <p className=" font-sans my-2 lg:w-[500px] md:w-[70vw] ">
+          <p className=" font-sans my-2 lg:w-[650px] md:w-[70vw] ">
             <span className=" text-lg ">
-              Liquidity | Exclusive Podcast | FOUNDATION | Shared Rewards.
+              Pool Liquidity | Exclusive Podcast | FOUNDATION | Shared Rewards.
             </span>{" "}
           </p>
           <p className=" font-sans mt-2 flex items-center lg:w-[500px] md:w-[70vw] ">

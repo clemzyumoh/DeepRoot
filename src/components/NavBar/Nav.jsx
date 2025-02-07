@@ -37,7 +37,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [nestedDropdownOpen, setNestedDropdownOpen] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
-
   const Menus = [
     {
       name: "Discover",
@@ -47,16 +46,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           name: "Overview",
           desc: "Overview Description",
           icon: <Users size={16} />,
+          link: "https://example.com/overview",
         },
         {
           name: "Treads",
           desc: "Treads Description",
           icon: <Briefcase size={16} />,
+          link: "https://example.com/trends",
         },
         {
           name: "Insight",
           desc: "Insights Description",
           icon: <Briefcase size={16} />,
+          link: "https://example.com/insights",
         },
       ],
     },
@@ -68,16 +70,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           name: "Tech",
           desc: "Tech Description",
           icon: <Cpu size={16} />,
+          link: "https://example.com/tech",
         },
         {
           name: "Start-ups",
           desc: "Start-ups Description",
           icon: <ListRestart size={16} />,
+          link: "https://example.com/startups",
         },
         {
           name: "Research",
           desc: "Research Description",
           icon: <BookCheck size={16} />,
+          link: "https://example.com/research",
         },
       ],
     },
@@ -89,16 +94,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           name: "Development",
           desc: "Development Description",
           icon: <Blocks size={16} />,
+          link: "https://example.com/development",
         },
         {
           name: "Security",
           desc: "Security Description",
           icon: <Lock size={16} />,
+          link: "https://example.com/security",
         },
         {
           name: "Integration",
           desc: "Integration Description",
           icon: <Workflow size={16} />,
+          link: "https://example.com/integration",
         },
       ],
     },
@@ -110,16 +118,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           name: "Event",
           desc: "Event Description",
           icon: <CalendarCheck size={16} />,
+          link: "https://example.com/events",
         },
         {
           name: "Meetups",
           desc: "Meetings Description",
           icon: <Component size={16} />,
+          link: "https://example.com/meetup",
         },
         {
           name: "Partners",
           desc: "Partners Description",
           icon: <Handshake size={16} />,
+          link: "https://example.com/partners",
         },
       ],
     },
@@ -131,16 +142,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           name: "Forum",
           desc: "Forum Description",
           icon: <Strikethrough size={16} />,
+          link: "https://example.com/forum",
         },
         {
           name: "Support",
           desc: "Support Description",
           icon: <HeartHandshake size={16} />,
+          link: "https://example.com/support",
         },
         {
           name: "Resoures",
           desc: "Resources Description",
           icon: <LucideShieldPlus size={16} />,
+          link: "https://example.com/resources",
         },
       ],
     },
@@ -150,26 +164,51 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       name: "Discover",
       icon: <Users size={25} />,
       subMenu: ["Overview", "Trends", "Insights"],
+      subMenuLinks: [
+        "https://example.com/overview",
+        "https://example.com/trends",
+        "https://example.com/insights",
+      ],
     },
     {
       name: "Innovate",
       icon: <Briefcase size={25} />,
       subMenu: ["Tech", "Startups", "Research"],
+      subMenuLinks: [
+        "https://example.com/tech",
+        "https://example.com/startup",
+        "https://example.com/research",
+      ],
     },
     {
       name: "Solution",
       icon: <Code size={25} />,
       subMenu: ["Development", "Security", "Integration"],
+      subMenuLinks: [
+        "https://example.com/development",
+        "https://example.com/security",
+        "https://example.com/integration",
+      ],
     },
     {
       name: "Network",
       icon: <Network size={25} />,
       subMenu: ["Events", "Meetups", "Partners"],
+      subMenuLinks: [
+        "https://example.com/events",
+        "https://example.com/meetups",
+        "https://example.com/partners",
+      ],
     },
     {
       name: "Community",
       icon: <Users size={25} />,
       subMenu: ["Forum", "Support", "Resources"],
+      subMenuLinks: [
+        "https://example.com/forum",
+        "https://example.com/supprot",
+        "https://example.com/resources",
+      ],
     },
   ];
   const toggleHoverMenu = (state) => {
@@ -192,8 +231,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     },
   };
 
-
-
   return (
     <motion.nav
       className={`flex justify-between items-center  z-50 fixed w-full  p-4 border-b-0 border-neutral-200 ${
@@ -215,62 +252,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </h3>
 
         {/* Navbar Links (Desktop) */}
-        <div className="hidden  space-x-6">
-          {navLinks.map((item, index) => (
-            <div
-              key={index}
-              className="relative group"
-              onMouseEnter={() => setDropdownOpen(index)}
-              onMouseLeave={() => setDropdownOpen(null)}>
-              <button className="flex items-center gap-2 px-4 py-2 rounded hover:duration-1000 hover:delay-1000 hover:ease-in-out hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all">
-                {item.icon}
-                {item.name}
-                <ChevronDown size={14} />
-              </button>
 
-              {/* Dropdown */}
-              {dropdownOpen === index && (
-                <div
-                  //className=" absolute left-0 mt-2 w-48 bg-white dark:bg-neutral-800 shadow-lg rounded opacity-0 transition-opacity duration-300 ease-in-out"
-                  className={`absolute  left-0 mt-2 w-48 bg-white/5   dark:bg-neutral-800 shadow-lg rounded hover:delay-1000 transition-all ease-in-out 
-                    ${
-                      dropdownOpen === index
-                        ? "delay-1000  duration-1000 transition-all visible"
-                        : "opacity-0 delay-1000 translate-y-[-10px] invisible"
-                    }`}>
-                  {item.subMenu.map((subItem, subIndex) => (
-                    <div
-                      key={subIndex}
-                      className="relative group"
-                      onMouseEnter={() => setNestedDropdownOpen(subIndex)}
-                      onMouseLeave={() => setNestedDropdownOpen(null)}>
-                      <button className="flex items-center justify-between w-full text-left px-4 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-all">
-                        {subItem}
-                        <ChevronRight size={14} />
-                      </button>
-
-                      {/* Nested Dropdown */}
-                      {nestedDropdownOpen === subIndex && (
-                        <div className="absolute left-full top-0 mt-0 w-40 bg-white dark:bg-neutral-800 shadow-lg rounded">
-                          {["Option A", "Option B", "Option C"].map(
-                            (nested, j) => (
-                              <Link
-                                key={j}
-                                to={`/${subItem.toLowerCase()}/${nested.toLowerCase()}`}
-                                className="block px-4 py-2 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-all">
-                                {nested}
-                              </Link>
-                            )
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
         <motion.div>
           <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
@@ -304,21 +286,39 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       } bg-white/10`}>
                       <div className="space-y-2 grid gap-4">
                         {menu?.subMenu?.map((subMenu, index) => (
-                          <div
+                          // <div
+                          //   key={index}
+                          //   className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center  transition duration-300">
+                          //   <div className="flex items-center mr-5 gap-3">
+                          //     <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white  duration-300">
+                          //       {subMenu?.icon}
+                          //     </div>
+                          //   </div>
+                          //   <div className=" text-start group-hover:text-neutral-900">
+                          //     <h6 className="font-bold font-sans">
+                          //       {subMenu.name}
+                          //     </h6>
+                          //     <p className="text-sm ">{subMenu.desc}</p>
+                          //   </div>
+                          // </div>
+                          <a
                             key={index}
-                            className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center  transition duration-300">
+                            href={subMenu.link} // Add link property
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center transition duration-300">
                             <div className="flex items-center mr-5 gap-3">
                               <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white  duration-300">
                                 {subMenu?.icon}
                               </div>
                             </div>
-                            <div className=" text-start group-hover:text-neutral-900">
+                            <div className="text-start group-hover:text-neutral-900">
                               <h6 className="font-bold font-sans">
                                 {subMenu.name}
                               </h6>
-                              <p className="text-sm ">{subMenu.desc}</p>
+                              <p className="text-sm">{subMenu.desc}</p>
                             </div>
-                          </div>
+                          </a>
                         ))}
                       </div>
                     </motion.div>
@@ -426,11 +426,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     transition={{ duration: 0.3 }}
                     className="ml-4 mt-2 space-y-2">
                     {item.subMenu.map((subItem, i) => (
-                      <button
+                      // <button
+                      //   key={i}
+                      //   className="block w-full text-left px-4 py-2 bg-neutral-400 text-neutral-950 hover:scale-105 dark:bg-neutral-700 dark:text-neutral-200 font-orbitron hover:bg-neutral-600 rounded transition-all">
+                      //   {subItem}
+                      // </button>
+                      <a
                         key={i}
+                        href={item.subMenuLinks[i]} // Add the corresponding link
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block w-full text-left px-4 py-2 bg-neutral-400 text-neutral-950 hover:scale-105 dark:bg-neutral-700 dark:text-neutral-200 font-orbitron hover:bg-neutral-600 rounded transition-all">
                         {subItem}
-                      </button>
+                      </a>
                     ))}
                   </motion.div>
                 )}

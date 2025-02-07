@@ -1,10 +1,11 @@
 import React from 'react'
 import {
   FaTelegramPlane,
-  FaTwitter,
+  
   FaRedditAlien,
   FaDiscord,
 } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const socialLinks = [
@@ -17,8 +18,8 @@ const socialLinks = [
     color: "text-[#0088cc]", // Telegram Blue
   },
   {
-    name: "X (Twitter)",
-    icon: <FaTwitter className="text-[#1DA1F2]" size={30}/>,
+    name: "X",
+    icon: <BsTwitterX className="text-[#1DA1F2]" size={30}/>,
     description:
       "Follow us on Twitter for the latest updates and announcements.",
     link: "https://twitter.com/DeepRoots",

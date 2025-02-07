@@ -9,7 +9,7 @@ const Her0Section = () => {
   return (
     <motion.main className="flex justify-center z-10 relative flex-col md:mt-[88px] mt-[93px] lg:mt-[90px]  items-center mb-20">
       <div
-        className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover bg-center "
+        className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover scale-105 bg-center "
         style={{ backgroundImage: `url(${banner})` }}></div>
 
       {/* Heading */}

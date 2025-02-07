@@ -82,21 +82,30 @@ const PuzzleBox = () => {
   const [currentX, setCurrentX] = useState(0);
 
   useEffect(() => {
-    if (!isDragging) {
-      controls.start({
-        x: [currentX, "-100%"],
-        transition: {
-          ease: "linear",
-          duration: 10,
-          delay: 2,
-          repeat: Infinity,
-        },
-      });
-    }
+   if (!isDragging) {
+     let moveDistance;
+
+     if (window.innerWidth >= 1024) {
+       moveDistance = "-210%"; // Laptops & larger screens
+     } else if (window.innerWidth >= 768) {
+       moveDistance = "-500%"; // Tablets/iPads
+     } else  {
+       moveDistance = "-1500%"; // Phones
+     }
+
+     controls.start({
+       x: [currentX, moveDistance],
+       transition: {
+         ease: "linear",
+         duration: 20, // Adjust speed for better UX
+         repeat: Infinity,
+       },
+     });
+   }
   }, [controls, isDragging, currentX]);
 
   return (
-    <div className="w-full py-10 scrollbar-hide touch-pan-x">
+    <div className="w-full overflow-hidden py-10 scrollbar-hide  touch-pan-x">
       <motion.div
         className="flex space-x-6 "
         drag="x"
