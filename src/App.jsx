@@ -12,6 +12,7 @@ import Section6 from "./Sections/Section6";
 import Section7 from "./Sections/Section7";
 import ComparisonSection from "./Sections/Section9";
 import Section10 from "./Sections/Section10";
+import Section11 from "./Sections/Section11";
 // //import Section9 from "./Sections/Section9";
 // //import ComparisonSection from "./Sections/Section9";
 
@@ -97,7 +98,8 @@ function App() {
       <Section7 />
       <Section8 />
       <ComparisonSection />
-      <Section10/>
+      <Section10 />
+      <Section11/>
     </main>
   );
 }

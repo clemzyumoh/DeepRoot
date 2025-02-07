@@ -87,8 +87,8 @@ const PuzzleBox = () => {
         x: [currentX, "-100%"],
         transition: {
           ease: "linear",
-          duration: 20,
-          delay: 3,
+          duration: 10,
+          delay: 2,
           repeat: Infinity,
         },
       });

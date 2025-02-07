@@ -1,4 +1,5 @@
-import { Wallet} from "lucide-react";
+import { Wallet } from "lucide-react";
+import { CiWallet } from "react-icons/ci";
 import React from "react";
 import { SiDogecoin } from "react-icons/si";
 import { TbCoinTaka } from "react-icons/tb";
@@ -17,7 +18,7 @@ const Section2 = () => {
           <div className=" flex items-center cursor-pointer justify-center ">
             <div className="  dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aa0]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
               <a href="/#" target="_blank">
-                <Wallet className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
+                <CiWallet className="w-14 h-14 m-3 dark:text-[#ad1aa0]/80 text-[#0085a8]/80" />{" "}
               </a>
             </div>
 
