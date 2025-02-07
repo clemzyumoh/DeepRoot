@@ -1,5 +1,5 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { motion, useAnimation } from "framer-motion";
+// import { useEffect, useState } from "react";
 import {
   FaExchangeAlt,
   FaCubes,
@@ -76,55 +76,127 @@ const puzzleItems = [
   },
 ];
 
+// const PuzzleBox = () => {
+//   const controls = useAnimation();
+//   const [isDragging, setIsDragging] = useState(false);
+//   const [currentX, setCurrentX] = useState(0);
+
+//   useEffect(() => {
+//    if (!isDragging) {
+//      let moveDistance;
+
+//      if (window.innerWidth >= 1024) {
+//        moveDistance = "-550%"; // Laptops & larger screens
+//      } else if (window.innerWidth >= 768) {
+//        moveDistance = "-500%"; // Tablets/iPads
+//      } else  {
+//        moveDistance = "-1500%"; // Phones
+//      }
+
+//      controls.start({
+//        x: [currentX, moveDistance],
+//        transition: {
+//          ease: "linear",
+//          duration: 40, // Adjust speed for better UX
+//          repeat: Infinity,
+//        },
+//      });
+//    }
+//   }, [controls, isDragging, currentX]);
+
+//   return (
+//     <div className="w-full overflow-hidden py-10 scrollbar-hide  touch-pan-x">
+//       <motion.div
+//         className="flex space-x-6 "
+//         drag="x"
+//         dragConstraints={{ left: -1000, right: 0 }}
+//         whileDrag={{
+//           cursor: "grabbing",
+//         }}
+//         onDragStart={() => setIsDragging(true)}
+//         onDragEnd={(event, info) => {
+//           setIsDragging(false);
+//           setCurrentX(info.point.x);
+//         }}
+//         animate={controls}>
+//         {puzzleItems.concat(puzzleItems).map((item, index) => (
+//           <div
+//             key={index}
+//             className="backdrop-blur-md  transition-opacity dark:shadow-2xl group hover:scale-105 rounded-lg px-6 py-14 text-center flex shadow-xl items-center gap-4 min-w-[450px]">
+//             <div className=" dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
+//               <item.icon className="w-14 h-10 m-3 group-hover:scale-105 dark:text-[#ad1]/80 text-[#0085a8]/80" />{" "}
+//             </div>
+//             <div className="text-start ml-8">
+//               <h3 className="text-lg font-bold mb-3 font-orbitron w-full text-gray-900 dark:text-white">
+//                 {item.title}
+//               </h3>
+//               <p className="text-gray-600 dark:text-gray-300 text-sm">
+//                 {item.description}
+//               </p>
+//             </div>
+//           </div>
+//         ))}
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default PuzzleBox;
+
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+
 const PuzzleBox = () => {
   const controls = useAnimation();
   const [isDragging, setIsDragging] = useState(false);
   const [currentX, setCurrentX] = useState(0);
+  const containerRef = useRef(null);
+  const cardWidth = 450; // Approximate width of one card
 
   useEffect(() => {
-   if (!isDragging) {
-     let moveDistance;
+    if (!isDragging) {
+      const cardWidth = 450; // Width of each card
+      const totalCards = puzzleItems.length * 2; // Duplicated items for infinite scroll
+      const moveDistance = -cardWidth * totalCards + window.innerWidth; // Ensures full scrolling
 
-     if (window.innerWidth >= 1024) {
-       moveDistance = "-550%"; // Laptops & larger screens
-     } else if (window.innerWidth >= 768) {
-       moveDistance = "-500%"; // Tablets/iPads
-     } else  {
-       moveDistance = "-1500%"; // Phones
-     }
-
-     controls.start({
-       x: [currentX, moveDistance],
-       transition: {
-         ease: "linear",
-         duration: 40, // Adjust speed for better UX
-         repeat: Infinity,
-       },
-     });
-   }
+      controls.start({
+        x: [currentX, moveDistance],
+        transition: {
+          ease: "linear",
+          duration: 40,
+          repeat: Infinity,
+        },
+      });
+    }
   }, [controls, isDragging, currentX]);
 
   return (
-    <div className="w-full overflow-hidden py-10 scrollbar-hide  touch-pan-x">
+    <div className="w-full overflow-hidden py-10 scrollbar-hide touch-pan-x">
       <motion.div
-        className="flex space-x-6 "
+        ref={containerRef}
+        className="flex space-x-6"
         drag="x"
-        dragConstraints={{ left: -1000, right: 0 }}
-        whileDrag={{
-          cursor: "grabbing",
+        dragConstraints={{
+          left: -(puzzleItems.length * cardWidth),
+          right: 0,
         }}
-        onDragStart={() => setIsDragging(true)}
+        whileDrag={{ cursor: "grabbing" }}
+        onDragStart={() => {
+          setIsDragging(true);
+          controls.stop(); // Stop auto-scroll while dragging
+        }}
         onDragEnd={(event, info) => {
           setIsDragging(false);
           setCurrentX(info.point.x);
         }}
-        animate={controls}>
+        animate={isDragging ? {} : controls} // Stop animation while dragging
+      >
         {puzzleItems.concat(puzzleItems).map((item, index) => (
           <div
             key={index}
-            className="backdrop-blur-md  transition-opacity dark:shadow-2xl group hover:scale-105 rounded-lg px-6 py-14 text-center flex shadow-xl items-center gap-4 min-w-[450px]">
-            <div className=" dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1]  shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md  ">
-              <item.icon className="w-14 h-10 m-3 group-hover:scale-105 dark:text-[#ad1]/80 text-[#0085a8]/80" />{" "}
+            className="backdrop-blur-md transition-opacity dark:shadow-2xl group hover:scale-105 rounded-lg px-6 py-14 text-center flex shadow-xl items-center gap-4 min-w-[450px]">
+            <div className="dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1] shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md">
+              <item.icon className="w-14 h-10 m-3 group-hover:scale-105 dark:text-[#ad1]/80 text-[#0085a8]/80" />
             </div>
             <div className="text-start ml-8">
               <h3 className="text-lg font-bold mb-3 font-orbitron w-full text-gray-900 dark:text-white">
