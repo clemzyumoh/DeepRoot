@@ -43,7 +43,7 @@ const foundationItems = [
     description: "Play and win BIG blockchain rewards.",
   },
   {
-    icon: CiWallet,
+    icon: CiWallet ,
     title: "Full Wallet Access",
     description: "Unlock staking, launchpad, and ecosystem updates.",
   },
@@ -82,7 +82,7 @@ const Section11 = () => {
               <div
                 key={index}
                 className="flex items-center gap-4 p-4 hover:scale-105 bg-white/70 dark:bg-gray-800 rounded-lg shadow-md">
-                <item.icon className="text-4xl text-[#0085a5]" />
+                <item.icon className="text-5xl text-[#0085a5]" />
                 <div>
                   <h3 className="text-lg font-semibold font-orbitron text-gray-900 dark:text-white">
                     {item.title}

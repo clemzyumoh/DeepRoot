@@ -51,8 +51,8 @@ const Section4 = () => {
               className="lg:direction-left   md:direction-right sm:direction-bottom">
               <FaSackDollar className="w-10 h-10 mr-4 dark:text-amber-600 text-[#0085a8]" />
             </AnimateItem>
-            <p className="  lg:w-[500px]  font-orbitron md:w-[70vw]">
-              <span className="font-orbitron text-lg">
+            <p className="  lg:w-[500px]  font-sans md:w-[70vw]">
+              <span className="text-lg">
                 Seed, Earn, and Grow
               </span>{" "}
               - Pool

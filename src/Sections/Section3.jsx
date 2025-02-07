@@ -43,7 +43,10 @@ const Section3 = () => {
           <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]  ">
             <span className="font-orbitron mb-5 font-bold">
               Warp Around Wealth -- 8 Layers of Dynamic Finance.
-            </span>{"  "}
+            </span>
+            {"  "}
+          </p>
+          <p className="font-sans my-3">
             More Than a Wallet, It's an Earning Machine. Activate & Begin Your
             Journey to wealth!
           </p>
