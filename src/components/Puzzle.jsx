@@ -86,7 +86,7 @@ const PuzzleBox = () => {
      let moveDistance;
 
      if (window.innerWidth >= 1024) {
-       moveDistance = "-210%"; // Laptops & larger screens
+       moveDistance = "-550%"; // Laptops & larger screens
      } else if (window.innerWidth >= 768) {
        moveDistance = "-500%"; // Tablets/iPads
      } else  {
@@ -97,7 +97,7 @@ const PuzzleBox = () => {
        x: [currentX, moveDistance],
        transition: {
          ease: "linear",
-         duration: 20, // Adjust speed for better UX
+         duration: 40, // Adjust speed for better UX
          repeat: Infinity,
        },
      });

@@ -100,9 +100,10 @@ function App() {
 
       <Section8 />
       <ComparisonSection />
-      <Section10 />
+
       <Section11 />
       <Section7 />
+      <Section10 />
     </main>
   );
 }
