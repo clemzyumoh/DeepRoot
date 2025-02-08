@@ -1,5 +1,5 @@
-// import { motion, useAnimation } from "framer-motion";
-// import { useEffect, useState } from "react";
+ import { motion, useAnimation , useMotionValue} from "framer-motion";
+ import { useEffect, useState , useRef} from "react";
 import {
   FaExchangeAlt,
   FaCubes,
@@ -143,54 +143,122 @@ const puzzleItems = [
 
 // export default PuzzleBox;
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+
+// const PuzzleBox = () => {
+//   const [isDragging, setIsDragging] = useState(false);
+//   const [xPosition, setXPosition] = useState(0);
+//   const containerRef = useRef(null);
+//   const cardWidth = 450;
+//   const totalWidth = puzzleItems.length * cardWidth;
+
+//   useEffect(() => {
+//     let animationFrame;
+
+//     const autoScroll = () => {
+//       if (!isDragging) {
+//         setXPosition((prev) => (prev - 1) % totalWidth);
+//       }
+//       animationFrame = requestAnimationFrame(autoScroll);
+//     };
+
+//     autoScroll(); // Start auto-scrolling
+
+//     return () => cancelAnimationFrame(animationFrame);
+//   }, [isDragging, totalWidth]);
+
+//   return (
+//     <div className="w-full overflow-hidden py-10 scrollbar-hide touch-pan-x">
+//       <motion.div
+//         ref={containerRef}
+//         className="flex space-x-6"
+//         style={{ transform: `translateX(${xPosition}px)` }}
+//         drag="x"
+//         dragConstraints={{
+//           left: -totalWidth,
+//           right: 0,
+//         }}
+//         whileDrag={{ cursor: "grabbing" }}
+//         onDragStart={() => setIsDragging(true)}
+//         onDragEnd={(event, info) => {
+//           setIsDragging(false);
+//           setXPosition(info.point.x);
+//         }}>
+//         {puzzleItems.concat(puzzleItems).map((item, index) => (
+//           <div
+//             key={index}
+//             className="backdrop-blur-md transition-opacity dark:shadow-2xl group hover:scale-105 rounded-lg px-6 py-14 text-center flex shadow-xl items-center gap-4 min-w-[450px]">
+//             <div className="dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1] shadow-[1px_1px_2px_#ad1aa0,-1px_-1px_2px_#0085a8] rounded-md">
+//               <item.icon className="w-14 h-10 m-3 group-hover:scale-105 dark:text-[#ad1]/80 text-[#0085a8]/80" />
+//             </div>
+//             <div className="text-start ml-8">
+//               <h3 className="text-lg font-bold mb-3 font-orbitron w-full text-gray-900 dark:text-white">
+//                 {item.title}
+//               </h3>
+//               <p className="text-gray-600 dark:text-gray-300 text-sm">
+//                 {item.description}
+//               </p>
+//             </div>
+//           </div>
+//         ))}
+//       </motion.div>
+//     </div>
+//   );
+// };
+
+// export default PuzzleBox;
+
+
 
 const PuzzleBox = () => {
   const controls = useAnimation();
+  const x = useMotionValue(0); // Tracks x position
   const [isDragging, setIsDragging] = useState(false);
-  const [currentX, setCurrentX] = useState(0);
-  const containerRef = useRef(null);
-  const cardWidth = 450; // Approximate width of one card
+
+  // Calculate dynamic drag limit
+  const cardWidth = 450;
+  const totalCards = puzzleItems.length * 2;
+  const dragLimit = -(cardWidth * totalCards - window.innerWidth);
 
   useEffect(() => {
     if (!isDragging) {
-      const cardWidth = 450; // Width of each card
-      const totalCards = puzzleItems.length * 2; // Duplicated items for infinite scroll
-      const moveDistance = -cardWidth * totalCards + window.innerWidth; // Ensures full scrolling
-
+      // Auto-scroll animation
       controls.start({
-        x: [currentX, moveDistance],
+        x: dragLimit,
         transition: {
           ease: "linear",
+          
           duration: 40,
           repeat: Infinity,
         },
       });
     }
-  }, [controls, isDragging, currentX]);
+  }, [controls, isDragging, dragLimit]);
 
   return (
     <div className="w-full overflow-hidden py-10 scrollbar-hide touch-pan-x">
       <motion.div
-        ref={containerRef}
         className="flex space-x-6"
         drag="x"
-        dragConstraints={{
-          left: -(puzzleItems.length * cardWidth),
-          right: 0,
-        }}
-        whileDrag={{ cursor: "grabbing" }}
+        dragConstraints={{ left: dragLimit, right: 0 }}
+        dragElastic={0.1}
+        style={{ x }} // Bind motion value for precise control
         onDragStart={() => {
           setIsDragging(true);
-          controls.stop(); // Stop auto-scroll while dragging
+          controls.stop(); // Stop auto-scroll on drag start
         }}
-        onDragEnd={(event, info) => {
+        
+        onDragEnd={() => {
           setIsDragging(false);
-          setCurrentX(info.point.x);
+          controls.start({
+            x: dragLimit,
+            transition: {
+              ease: "linear",
+              duration: 40,
+              repeat: Infinity,
+            },
+          });
         }}
-        animate={isDragging ? {} : controls} // Stop animation while dragging
-      >
+        animate={controls}>
         {puzzleItems.concat(puzzleItems).map((item, index) => (
           <div
             key={index}
