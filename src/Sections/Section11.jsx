@@ -53,7 +53,7 @@ const Section11 = () => {
     return (
       <section className="w-full bg-gray-400 dark:bg-gray-900 py-20 px-6 md:px-16 flex flex-col lg:flex-row items-center gap-10">
         {/* Image Section */}
-        <div className="w-full hidden md:flex justify-center items-center flex-col  md:w-1/2">
+        <div className="w-[800px] h-[500px] mt-36 hidden lg:flex justify-center py-72 items-center flex-col  ">
           <img
             src={img}
             alt="Foundation"
@@ -96,7 +96,7 @@ const Section11 = () => {
                 </div>
               </div>
             ))}
-            <button className="mt-6 font-bold lg:mt- border-2  md:hidden hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#0085a8] to-amber-700 mr-6 px-6 font-orbitron py-3 text-center hover:border-2 dark-hover:border-[#0085a8] border-[#0085a8]  dark:hover:bg-none dark:hover:text-[#0085a8] transition-all   hover:ease-in-out  rounded-lg  text-lg tracking-wider ">
+            <button className="mt-6 font-bold lg:mt- border-2  lg:hidden hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#0085a8] to-amber-700 mr-6 px-6 font-orbitron py-3 text-center hover:border-2 dark-hover:border-[#0085a8] border-[#0085a8]  dark:hover:bg-none dark:hover:text-[#0085a8] transition-all   hover:ease-in-out  rounded-lg  text-lg tracking-wider ">
               Join The Future
             </button>
           </motion.div>
@@ -104,7 +104,7 @@ const Section11 = () => {
         <div className="z-0 text-lg">
           <BlurEffect
             color="#0085a8"
-            className="w-60 h-60 absolute lg:bottom-16 lg:right-0 bg-[#0085a8] blur-[180px] rounded-full"
+            className="w-60 h-60 absolute lg:bottom-16 lg:right-0 bg-[#0085a8] blur-[300px] lg:dark:blur-[250px] rounded-full"
           />
         </div>
       </section>

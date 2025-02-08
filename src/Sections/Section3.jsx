@@ -206,7 +206,7 @@ const Section3 = () => {
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:top-0 dark:lg:right-0 lg:right-16 bg-neutral-950 dark:bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-60 h-60 absolute lg:top-0 dark:lg:right-0 lg:right-16 bg-neutral-950 dark:bg-[#0085a8] blur-[300px] rounded-full"
         />
       </div>
 

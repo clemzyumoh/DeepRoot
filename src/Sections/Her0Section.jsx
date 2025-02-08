@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Her0Section = () => {
   return (
-    <motion.main className="flex justify-center z-10 relative flex-col md:mt-[88px] mt-[93px] lg:mt-[90px]  items-center mb-20">
+    <motion.main className="flex justify-center z-10 relative flex-col lg:scale-x-105 md:mt-[88px] mt-[70px] lg:mt-[93px]  items-center mb-20">
       <div
-        className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover scale-105 bg-center "
+        className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover  bg-center "
         style={{ backgroundImage: `url(${banner})` }}></div>
 
       {/* Heading */}
@@ -21,19 +21,19 @@ const Her0Section = () => {
         text=" HELLO FUTURE BY DEEPROOTS"
         animation="fade"
         as="h1"
-        className="font-extrabold text-2xl text-center lg:text-6xl shadow-md shadow-[#0085a8] leading-[55px] my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-neutral-500 bg-clip-text font-orbitron text-transparent"
+        className="font-extrabold text-lg text-center md:text-4xl lg:text-6xl shadow-sm shadow-[#0085a8] leading-[55px] my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-[#0085a8] dark:to-[#0085a8] bg-clip-text font-orbitron text-transparent"
       />
 
       <div className="z-0  hidden lg:flex text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:bottom-16 lg:right-0 bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-60 h-60 absolute lg:bottom-16 lg:right-0 bg-[#0085a8] blur-3xl hidden lg:flex lg:blur-[300px] rounded-full"
         />
       </div>
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:bottom-16 lg:left-0 bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-60 h-60 absolute lg:bottom-16 lg:left-0 bg-[#0085a8] hidden lg:flex lg:blur-[300px] rounded-full"
         />
       </div>
       {/* Paragraph */}

@@ -55,14 +55,14 @@ const Section8 = () => {
       <div className="z-0 text-lg">
         <BlurEffect
           color="#ad1aa0"
-          className="w-72 h-72 absolute top-150 right-200 bg-[#ad1aa0] dark:bg-[#0085a8] blur-[250px] rounded-full"
+          className="w-72 h-72 absolute top-150 right-200 bg-[#ad1aa0] hidden lg:flex dark:bg-[#0085a8] blur-[300px] rounded-full"
         />
       </div>
 
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:top-0 dark:lg:right-0 lg:right-16 bg-neutral-950 dark:bg-[#0085a8] blur-[180px] rounded-full"
+          className="w-60 h-60 absolute lg:top-0 dark:lg:right-0 lg:right-16 bg-neutral-950 dark:bg-[#0085a8] blur-[300px] rounded-full"
         />
       </div>
     </main>

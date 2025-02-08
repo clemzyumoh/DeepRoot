@@ -87,7 +87,7 @@ function App() {
       <div className="z-0 text-lg">
         <BlurEffect
           color="#0085a8"
-          className="w-60 h-60 absolute lg:top-0 lg:right-0 bg-[#0085a8] blur-[250px] rounded-full"
+          className="w-60 h-60 absolute lg:top-0 lg:right-0 hidden bg-[#0085a8] blur-[300px] rounded-full"
         />
       </div>
       <Her0Section />

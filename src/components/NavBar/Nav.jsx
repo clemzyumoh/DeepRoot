@@ -233,14 +233,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     <motion.nav
-      className={`flex justify-between items-center  z-50 fixed w-full  p-4 border-b-0 border-neutral-200 ${
+      className={`flex justify-between items-center  z-50 fixed w-full lg:px-12  p-4 border-b-0 border-neutral-200 ${
         darkMode
           ? "bg-[#1c1d20] text-neutral-300"
           : "bg-neutral-300 text-neutral-900"
       }`}>
       {/* Logo & Nav Links */}
       <div className="flex items-center  space-x-5">
-        <div className="w-16  h-16 overflow-hidden rounded-full">
+        <div className="w-10  h-10 md:w-16 md:h-16 overflow-hidden rounded-full">
           <img
             src={img}
             className="w-full h-full object-cover scale-150 "
@@ -357,10 +357,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div> */}
         {/* Language Selector */}
         <div className="relative group">
-          <button className="flex items-center px-2 md:px-4 py-2  bg-neutral-300 border-2 border-[#0085a8] dark:bg-[#0085a8] rounded-md hover:bg-neutral-400 dark:hover:bg-neutral-600 transition-all">
-            <Globe size={20} className="mr-2" />
-            <span className="text-sm font-medium font-orbitron">Language</span>
-            <ChevronDown size={14} className="ml-2" />
+          <button className="flex items-center px-2 md:px-4 py-2  lg:bg-neutral-300  lg:border-2 border-[#0085a8] lg:dark:bg-[#0085a8] rounded-md lg:hover:bg-neutral-400 lg:dark:hover:bg-neutral-600 transition-all">
+            <Globe size={20} className="mr-2 lg:dark:text-neutral-300 dark:text-[#0085a8]" />
+            <span className="text-sm font-medium hidden lg:flex font-orbitron">Language</span>
+            <ChevronDown size={14} className="ml-2 hidden lg:flex" />
           </button>
 
           <div className="absolute right-0 mt-2 w-52 bg-white z-50 dark:border-none dark:bg-neutral-800 shadow-lg rounded hidden group-hover:block">
