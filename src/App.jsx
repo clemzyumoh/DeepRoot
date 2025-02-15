@@ -101,6 +101,11 @@ function App() {
       <Section4 />
       <Section5 />
       <Section6 />
+      <Section16 />
+      <InnoFiSection />
+      <Section15 />
+      <Section13 />
+      
       <Section12 />
 
       <Section8 />
@@ -108,11 +113,8 @@ function App() {
 
       <Section11 />
       <Section7 />
-      <Section13 />
-      <InnoFiSection />
-      <Section15 />
-      <Section16 />
-      <Section17/>
+    
+      <Section17 />
       <Section10 />
     </main>
   );

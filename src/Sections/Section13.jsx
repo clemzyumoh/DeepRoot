@@ -17,7 +17,21 @@ const MetaFabricSection = () => {
   return (
     <section className="flex relative flex-col lg:flex-row items-center py-10  p-6 lg:p-12 gap-8 bg-white dark:bg-neutral-900">
       {/* Image */}
-
+      <div className="flex justify-center items-center my-4 flex-col">
+        <AnimatedText
+          text="MetaFabric:"
+          animation="fade"
+          as="h1"
+          className="font-extrabold lg:max-w-[600px] text-3xl lg:hidden leading-[40px]   lg:text-4xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+        />
+        <AnimatedText
+          text="Blockchain to Runway Your Style,Your NFT DeWorld"
+          animation="fade"
+          as="h1"
+          className="font-bold text-center lg:max-w-[600px] text-xl lg:hidden l lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+        />
+      
+      </div>
       <AnimateItem direction="left" delay={0.2}>
         <img
           src={MetaFabricImage}
@@ -36,19 +50,19 @@ const MetaFabricSection = () => {
             text="MetaFabric:"
             animation="fade"
             as="h1"
-            className="font-extrabold lg:max-w-[600px] text-3xl leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold lg:max-w-[600px] text-3xl hidden lg:block leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
           />
           <AnimatedText
             text="Blockchain to Runway Your Style,"
             animation="fade"
             as="h1"
-            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px] hidden lg:block lg:text-start lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
           />
           <AnimatedText
             text=" Your NFT DeWorld"
             animation="fade"
             as="h1"
-            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal mb-3 bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px] hidden lg:block lg:text-start lg:text-2xl   lg:leading-normal mb-3 bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
           />
           <ul className="space-y-4 ">
             <li className="flex items-center gap-3 ">

@@ -25,6 +25,19 @@ import {
   Cpu,
   ListRestart,
   BookCheck,
+  Wallet,
+  Mic,
+  Vote,
+  Rocket,
+  Shirt,
+  BookOpen,
+  Gamepad,
+  Lightbulb,
+  PieChart,
+  DollarSign,
+  Settings,
+  Calendar,
+  XIcon,
 } from "lucide-react";
 import { FaMicrophone } from "react-icons/fa";
 import img from "../NavBar/logo.jpg";
@@ -38,180 +51,723 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   const [nestedDropdownOpen, setNestedDropdownOpen] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
 
-  const Menus = [
-    {
-      name: "Discover",
-      subMenuHeading: ["overview", "Treads", "Insights"],
-      subMenu: [
-        {
-          name: "Overview",
-          desc: "Overview Description",
-          icon: <Users size={16} />,
-          link: "https://example.com/overview",
-        },
-        {
-          name: "Treads",
-          desc: "Treads Description",
-          icon: <Briefcase size={16} />,
-          link: "https://example.com/trends",
-        },
-        {
-          name: "Insight",
-          desc: "Insights Description",
-          icon: <Briefcase size={16} />,
-          link: "https://example.com/insights",
-        },
-      ],
-    },
-    {
-      name: "Innovate",
-      subMenuHeading: ["overview", "Treads", "Insights"],
-      subMenu: [
-        {
-          name: "Tech",
-          desc: "Tech Description",
-          icon: <Cpu size={16} />,
-          link: "https://example.com/tech",
-        },
-        {
-          name: "Start-ups",
-          desc: "Start-ups Description",
-          icon: <ListRestart size={16} />,
-          link: "https://example.com/startups",
-        },
-        {
-          name: "Research",
-          desc: "Research Description",
-          icon: <BookCheck size={16} />,
-          link: "https://example.com/research",
-        },
-      ],
-    },
-    {
-      name: "DeWorld",
-      subMenuHeading: ["overview", "Treads", "Insights"],
-      subMenu: [
-        {
-          name: "Development",
-          desc: "Development Description",
-          icon: <Blocks size={16} />,
-          link: "https://example.com/development",
-        },
-        {
-          name: "Security",
-          desc: "Security Description",
-          icon: <Lock size={16} />,
-          link: "https://example.com/security",
-        },
-        {
-          name: "Integration",
-          desc: "Integration Description",
-          icon: <Workflow size={16} />,
-          link: "https://example.com/integration",
-        },
-      ],
-    },
-    {
-      name: "Solution",
-      subMenuHeading: ["overview", "Treads", "Insights"],
-      subMenu: [
-        {
-          name: "Event",
-          desc: "Event Description",
-          icon: <CalendarCheck size={16} />,
-          link: "https://example.com/events",
-        },
-        {
-          name: "Meetups",
-          desc: "Meetings Description",
-          icon: <Component size={16} />,
-          link: "https://example.com/meetup",
-        },
-        {
-          name: "Partners",
-          desc: "Partners Description",
-          icon: <Handshake size={16} />,
-          link: "https://example.com/partners",
-        },
-      ],
-    },
-    {
-      name: "Community",
-      subMenuHeading: ["overview", "Treads", "Insights"],
-      subMenu: [
-        {
-          name: "Forum",
-          desc: "Forum Description",
-          icon: <Strikethrough size={16} />,
-          link: "https://example.com/forum",
-        },
-        {
-          name: "Support",
-          desc: "Support Description",
-          icon: <HeartHandshake size={16} />,
-          link: "https://example.com/support",
-        },
-        {
-          name: "Resoures",
-          desc: "Resources Description",
-          icon: <LucideShieldPlus size={16} />,
-          link: "https://example.com/resources",
-        },
-      ],
-    },
-  ];
-  const navLinks = [
-    {
-      name: "Discover",
-      icon: <Users size={25} />,
-      subMenu: ["Overview", "Trends", "Insights"],
-      subMenuLinks: [
-        "https://example.com/overview",
-        "https://example.com/trends",
-        "https://example.com/insights",
-      ],
-    },
-    {
-      name: "Innovate",
-      icon: <Briefcase size={25} />,
-      subMenu: ["Tech", "Startups", "Research"],
-      subMenuLinks: [
-        "https://example.com/tech",
-        "https://example.com/startup",
-        "https://example.com/research",
-      ],
-    },
-    {
-      name: "DeWorld",
-      icon: <Code size={25} />,
-      subMenu: ["Development", "Security", "Integration"],
-      subMenuLinks: [
-        "https://example.com/development",
-        "https://example.com/security",
-        "https://example.com/integration",
-      ],
-    },
-    {
-      name: "Solution",
-      icon: <Network size={25} />,
-      subMenu: ["Events", "Meetups", "Partners"],
-      subMenuLinks: [
-        "https://example.com/events",
-        "https://example.com/meetups",
-        "https://example.com/partners",
-      ],
-    },
-    {
-      name: "Community",
-      icon: <Users size={25} />,
-      subMenu: ["Forum", "Support", "Resources"],
-      subMenuLinks: [
-        "https://example.com/forum",
-        "https://example.com/supprot",
-        "https://example.com/resources",
-      ],
-    },
-  ];
+
+
+const Menus = [
+  {
+    name: "Discover",
+    subMenuHeading: [
+      "Overview of Deep Roots",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "Saxophone Podcast",
+      "SHARE VALUE",
+      "White Paper",
+      "Roadmap",
+      "How to Get Started",
+    ],
+    subMenu: [
+      {
+        name: "Overview of Deep Roots",
+        desc: "Deep Roots Overview.",
+        icon: <Users size={16} />,
+        link: "https://example.com/overview",
+      },
+      {
+        name: "The Address Wallet – Your Earning Machine",
+        desc: "Learn how to earn with The Address Wallet.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/address-wallet",
+      },
+      {
+        name: "Telexcoin DEX – Connected & Strategic Trading",
+        desc: "Trade strategically on Telexcoin DEX.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/telexcoin-dex",
+      },
+      {
+        name: "Deep Assets: Digitized Real Assets (RWA)",
+        desc: "Explore digitized real assets.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/deep-assets",
+      },
+      {
+        name: "InnoFi: Milestone Vote Hub for DeWorld Funding",
+        desc: "Vote for DeWorld funding milestones.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/innofi",
+      },
+      {
+        name: "InnoLaunch: Powering the Next Big Thing – DeWorld Way",
+        desc: "Discover upcoming projects with InnoLaunch.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/innolaunch",
+      },
+      {
+        name: "MetaFabric: From Blockchain to Runway – Your Style, Your NFT DeWorld",
+        desc: "Customize your style with MetaFabric NFTs.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/metafabric",
+      },
+      {
+        name: "RootOpia: Where the Biggest Pool Race Meets DeWorld Gaming",
+        desc: "Join the pool race in DeWorld Gaming.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/rootopia",
+      },
+      {
+        name: "Saxophone Podcast: Where Blockchain Meets the Beat",
+        desc: "Tune into blockchain insights with Saxophone Podcast.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/saxophone-podcast",
+      },
+      {
+        name: "SHARE VALUE: Learn, Create, Innovate – A DeWorld Education Tool for All",
+        desc: "Education hub for learning and innovation.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/share-value",
+      },
+      {
+        name: "White Paper",
+        desc: "Explore DeWorld's white paper.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/white-paper",
+      },
+      {
+        name: "Roadmap",
+        desc: "Check out DeWorld's roadmap.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/roadmap",
+      },
+      {
+        name: "How to Get Started (Guides for New Users & Investors)",
+        desc: "Guides for beginners and investors.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/get-started",
+      },
+    ],
+  },
+  {
+    name: "Innovate",
+    subMenuHeading: [
+      "Truly Dynamic Blockchain",
+      "Tokenomics",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets RWA",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "SHARE VALUE",
+    ],
+    subMenu: [
+      {
+        name: "Truly Dynamic Blockchain",
+        desc: "The Next-Gen Blockchain.",
+        icon: <Cpu size={16} />,
+        link: "https://example.com/dynamic-blockchain",
+      },
+      {
+        name: "Tokenomics – Limited Supply Over 41 Years",
+        desc: "Explore long-term value with limited supply.",
+        icon: <ListRestart size={16} />,
+        link: "https://example.com/tokenomics",
+      },
+      {
+        name: "The Address Wallet – Your Earning Machine",
+        desc: "Learn how to earn with The Address Wallet.",
+        icon: <Wallet size={16} />,
+        link: "https://example.com/address-wallet",
+      },
+      {
+        name: "Telexcoin DEX – Connected & Strategic Trading",
+        desc: "Trade strategically on Telexcoin DEX.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/telexcoin-dex",
+      },
+      {
+        name: "Deep Assets RWA – Digitized Real Assets",
+        desc: "Explore digitized real assets.",
+        icon: <BookCheck size={16} />,
+        link: "https://example.com/deep-assets-rwa",
+      },
+      {
+        name: "Saxophone Podcast: Where Blockchain Meets the Beat",
+        desc: "Tune into blockchain insights with Saxophone Podcast.",
+        icon: <Mic size={16} />,
+        link: "https://example.com/saxophone-podcast",
+      },
+      {
+        name: "InnoFi: Milestone Vote Hub for DeWorld Funding",
+        desc: "Vote for DeWorld funding milestones.",
+        icon: <Vote size={16} />,
+        link: "https://example.com/innofi",
+      },
+      {
+        name: "InnoLaunch: Powering the Next Big Thing – DeWorld Way",
+        desc: "Discover upcoming projects with InnoLaunch.",
+        icon: <Rocket size={16} />,
+        link: "https://example.com/innolaunch",
+      },
+      {
+        name: "MetaFabric: From Blockchain to Runway – Your Style, Your NFT DeWorld",
+        desc: "Customize your style with MetaFabric NFTs.",
+        icon: <Shirt size={16} />,
+        link: "https://example.com/metafabric",
+      },
+      {
+        name: "RootOpia: Where the Biggest Pool Race Meets DeWorld Gaming",
+        desc: "Join the pool race in DeWorld Gaming.",
+        icon: <Gamepad size={16} />,
+        link: "https://example.com/rootopia",
+      },
+      {
+        name: "SHARE VALUE: Learn, Create, Innovate – A DeWorld Education Tool for All",
+        desc: "Education hub for learning and innovation.",
+        icon: <BookOpen size={16} />,
+        link: "https://example.com/share-value",
+      },
+    ],
+  },
+  {
+    name: "DeWorld",
+    subMenuHeading: [
+      "DEEP ROOTS DYNAMIC BLOCKCHAIN",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "SHARE VALUE",
+    ],
+    subMenu: [
+      {
+        name: "DEEP ROOTS DYNAMIC BLOCKCHAIN",
+        desc: "The next-gen dynamic blockchain.",
+        icon: <Cpu size={16} />,
+        link: "https://example.com/deep-roots-blockchain",
+      },
+      {
+        name: "The Address Wallet – Your Earning Machine",
+        desc: "Learn how to earn with The Address Wallet.",
+        icon: <Wallet size={16} />,
+        link: "https://example.com/address-wallet",
+      },
+      {
+        name: "Telexcoin DEX – Connected & Strategic Trading",
+        desc: "Trade strategically on Telexcoin DEX.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/telexcoin-dex",
+      },
+      {
+        name: "Deep Assets: Digitized Real Assets (RWA)",
+        desc: "Explore digitized real assets.",
+        icon: <BookCheck size={16} />,
+        link: "https://example.com/deep-assets",
+      },
+      {
+        name: "Saxophone Podcast: Where Blockchain Meets the Beat",
+        desc: "Tune into blockchain insights with Saxophone Podcast.",
+        icon: <Mic size={16} />,
+        link: "https://example.com/saxophone-podcast",
+      },
+      {
+        name: "InnoFi: Milestone Vote Hub for DeWorld Funding",
+        desc: "Vote for DeWorld funding milestones.",
+        icon: <Vote size={16} />,
+        link: "https://example.com/innofi",
+      },
+      {
+        name: "InnoLaunch: Powering the Next Big Thing – DeWorld Way",
+        desc: "Discover upcoming projects with InnoLaunch.",
+        icon: <Rocket size={16} />,
+        link: "https://example.com/innolaunch",
+      },
+      {
+        name: "MetaFabric: From Blockchain to Runway – Your Style, Your NFT DeWorld",
+        desc: "Customize your style with MetaFabric NFTs.",
+        icon: <Shirt size={16} />,
+        link: "https://example.com/metafabric",
+      },
+      {
+        name: "RootOpia: Where the Biggest Pool Race Meets DeWorld Gaming",
+        desc: "Join the pool race in DeWorld Gaming.",
+        icon: <Gamepad size={16} />,
+        link: "https://example.com/rootopia",
+      },
+      {
+        name: "SHARE VALUE: Learn, Create, Innovate – A DeWorld Education Tool for All",
+        desc: "Education hub for learning and innovation.",
+        icon: <BookOpen size={16} />,
+        link: "https://example.com/share-value",
+      },
+    ],
+  },
+  {
+    name: "Solution",
+    subMenuHeading: [
+      "Truly Dynamic Blockchain",
+      "Tokenomics",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets RWA",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "RootOpia",
+      "MetaFabric",
+      "SHARE VALUE",
+      "HFT & DEX",
+    ],
+    subMenu: [
+      {
+        name: "Truly Dynamic Blockchain – Scalable and Secure",
+        desc: "Next-gen blockchain with borderless scalability.",
+        icon: <Cpu size={16} />,
+        link: "https://example.com/dynamic-blockchain",
+      },
+      {
+        name: "Tokenomics – Long-Term Value",
+        desc: "Limited supply over 41 years.",
+        icon: <PieChart size={16} />,
+        link: "https://example.com/tokenomics",
+      },
+      {
+        name: "The Address Wallet – Asset Management & Earnings Growth",
+        desc: "Manage assets and grow earnings with DeWorld.",
+        icon: <Wallet size={16} />,
+        link: "https://example.com/address-wallet",
+      },
+      {
+        name: "Telexcoin DEX – Effortless Trading",
+        desc: "Trade with minimal slippage and optimized speed.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/telexcoin-dex",
+      },
+      {
+        name: "Deep Assets RWA – Tokenized Real-World Assets",
+        desc: "Fractional trading of tokenized real-world assets.",
+        icon: <BookCheck size={16} />,
+        link: "https://example.com/deep-assets-rwa",
+      },
+      {
+        name: "Saxophone Podcast – Blockchain Insights",
+        desc: "Tune into blockchain insights with Saxophone Podcast.",
+        icon: <Mic size={16} />,
+        link: "https://example.com/saxophone-podcast",
+      },
+      {
+        name: "InnoFi – Community Funding & Voting",
+        desc: "Empowering DeWorld to fund and vote.",
+        icon: <Vote size={16} />,
+        link: "https://example.com/innofi",
+      },
+      {
+        name: "InnoLaunch – Innovative Project Launchpad",
+        desc: "Launch the next big DeWorld project.",
+        icon: <Rocket size={16} />,
+        link: "https://example.com/innolaunch",
+      },
+      {
+        name: "RootOpia – Gamified Ecosystem",
+        desc: "Race, share, earn, and win in DeWorld's NFT pool.",
+        icon: <Gamepad size={16} />,
+        link: "https://example.com/rootopia",
+      },
+      {
+        name: "MetaFabric: From Blockchain to Runway – Your Style, Your NFT DeWorld",
+        desc: "Customize your style with MetaFabric NFTs.",
+        icon: <Shirt size={16} />,
+        link: "https://example.com/metafabric",
+      },
+      {
+        name: "SHARE VALUE – DeWorld Education Hub",
+        desc: "Learn, create, and innovate with SHARE VALUE.",
+        icon: <BookOpen size={16} />,
+        link: "https://example.com/share-value",
+      },
+      {
+        name: "HFT & DEX – Fast & Low-Cost Trading",
+        desc: "Instant trades with low slippage and minimal fees.",
+        icon: <DollarSign size={16} />,
+        link: "https://example.com/hft-dex",
+      },
+    ],
+  },
+  {
+    name: "Community",
+    subMenuHeading: [
+      "Saxophone Podcast",
+      "MetaFabric",
+      "News & Events",
+      "Careers & Fun",
+      "Social Media",
+    ],
+    subMenu: [
+      {
+        name: "Saxophone Podcast – Where Blockchain Meets the Beat",
+        desc: "Tune into blockchain insights with Saxophone Podcast.",
+        icon: <Mic size={16} />,
+        link: "https://example.com/saxophone-podcast",
+      },
+      {
+        name: "MetaFabric: From Blockchain to Runway – Your Style, Your NFT DeWorld",
+        desc: "Customize your style with MetaFabric NFTs.",
+        icon: <Shirt size={16} />,
+        link: "https://example.com/metafabric",
+      },
+      {
+        name: "News & Events – Stay Updated",
+        desc: "Get the latest news and upcoming events.",
+        icon: <Calendar size={16} />,
+        link: "https://example.com/news-events",
+      },
+      {
+        name: "Careers & Fun – Join the Movement",
+        desc: "Be part of the team with creativity and collaboration.",
+        icon: <Briefcase size={16} />,
+        link: "https://example.com/careers-fun",
+      },
+      {
+        name: "Social Media – Stay Connected",
+        desc: "Connect for rewards, updates, and exclusive education.",
+        icon: <XIcon size={16} />,
+        link: "https://example.com/social-media",
+      },
+    ],
+  },
+];
+
+const navLinks = [
+  {
+    name: "Discover",
+    icon: <Users size={25} />,
+    subMenu: [
+      "Overview of Deep Roots",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "Saxophone Podcast",
+      "SHARE VALUE",
+      "White Paper",
+      "Roadmap",
+      "How to Get Started",
+    ],
+    subMenuLinks: [
+      "https://example.com/overview",
+      "https://example.com/address-wallet",
+      "https://example.com/telexcoin-dex",
+      "https://example.com/deep-assets",
+      "https://example.com/innofi",
+      "https://example.com/innolaunch",
+      "https://example.com/metafabric",
+      "https://example.com/rootopia",
+      "https://example.com/saxophone-podcast",
+      "https://example.com/share-value",
+      "https://example.com/white-paper",
+      "https://example.com/roadmap",
+      "https://example.com/get-started",
+    ],
+  },
+  {
+    name: "Innovate",
+    icon: <Lightbulb size={25} />,
+    subMenu: [
+      "Truly Dynamic Blockchain",
+      "Tokenomics",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets RWA",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "SHARE VALUE",
+    ],
+    subMenuLinks: [
+      "https://example.com/dynamic-blockchain",
+      "https://example.com/tokenomics",
+      "https://example.com/address-wallet",
+      "https://example.com/telexcoin-dex",
+      "https://example.com/deep-assets-rwa",
+      "https://example.com/saxophone-podcast",
+      "https://example.com/innofi",
+      "https://example.com/innolaunch",
+      "https://example.com/metafabric",
+      "https://example.com/rootopia",
+      "https://example.com/share-value",
+    ],
+  },
+  {
+    name: "DeWorld",
+    icon: <Globe size={25} />,
+    subMenu: [
+      "DEEP ROOTS DYNAMIC BLOCKCHAIN",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "MetaFabric",
+      "RootOpia",
+      "SHARE VALUE",
+    ],
+    subMenuLinks: [
+      "https://example.com/deep-roots-blockchain",
+      "https://example.com/address-wallet",
+      "https://example.com/telexcoin-dex",
+      "https://example.com/deep-assets",
+      "https://example.com/saxophone-podcast",
+      "https://example.com/innofi",
+      "https://example.com/innolaunch",
+      "https://example.com/metafabric",
+      "https://example.com/rootopia",
+      "https://example.com/share-value",
+    ],
+  },
+  {
+    name: "Solution",
+    icon: <Settings size={25} />,
+    subMenu: [
+      "Truly Dynamic Blockchain",
+      "Tokenomics",
+      "The Address Wallet",
+      "Telexcoin DEX",
+      "Deep Assets RWA",
+      "Saxophone Podcast",
+      "InnoFi",
+      "InnoLaunch",
+      "RootOpia",
+      "MetaFabric",
+      "SHARE VALUE",
+      "HFT & DEX",
+    ],
+    subMenuLinks: [
+      "https://example.com/dynamic-blockchain",
+      "https://example.com/tokenomics",
+      "https://example.com/address-wallet",
+      "https://example.com/telexcoin-dex",
+      "https://example.com/deep-assets-rwa",
+      "https://example.com/saxophone-podcast",
+      "https://example.com/innofi",
+      "https://example.com/innolaunch",
+      "https://example.com/rootopia",
+      "https://example.com/metafabric",
+      "https://example.com/share-value",
+      "https://example.com/hft-dex",
+    ],
+  },
+  {
+    name: "Community",
+    icon: <Users size={25} />,
+    subMenu: [
+      "Saxophone Podcast",
+      "MetaFabric",
+      "News & Events",
+      "Careers & Fun",
+      "Social Media",
+    ],
+    subMenuLinks: [
+      "https://example.com/saxophone-podcast",
+      "https://example.com/metafabric",
+      "https://example.com/news-events",
+      "https://example.com/careers-fun",
+      "https://example.com/social-media",
+    ],
+  },
+];
+
+
+  // const Menus = [
+  //   {
+  //     name: "Discover",
+  //     subMenuHeading: ["overview", "Treads", "Insights"],
+  //     subMenu: [
+  //       {
+  //         name: "Overview",
+  //         desc: "Overview Description",
+  //         icon: <Users size={16} />,
+  //         link: "https://example.com/overview",
+  //       },
+  //       {
+  //         name: "Treads",
+  //         desc: "Treads Description",
+  //         icon: <Briefcase size={16} />,
+  //         link: "https://example.com/trends",
+  //       },
+  //       {
+  //         name: "Insight",
+  //         desc: "Insights Description",
+  //         icon: <Briefcase size={16} />,
+  //         link: "https://example.com/insights",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Innovate",
+  //     subMenuHeading: ["overview", "Treads", "Insights"],
+  //     subMenu: [
+  //       {
+  //         name: "Tech",
+  //         desc: "Tech Description",
+  //         icon: <Cpu size={16} />,
+  //         link: "https://example.com/tech",
+  //       },
+  //       {
+  //         name: "Start-ups",
+  //         desc: "Start-ups Description",
+  //         icon: <ListRestart size={16} />,
+  //         link: "https://example.com/startups",
+  //       },
+  //       {
+  //         name: "Research",
+  //         desc: "Research Description",
+  //         icon: <BookCheck size={16} />,
+  //         link: "https://example.com/research",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "DeWorld",
+  //     subMenuHeading: ["overview", "Treads", "Insights"],
+  //     subMenu: [
+  //       {
+  //         name: "Development",
+  //         desc: "Development Description",
+  //         icon: <Blocks size={16} />,
+  //         link: "https://example.com/development",
+  //       },
+  //       {
+  //         name: "Security",
+  //         desc: "Security Description",
+  //         icon: <Lock size={16} />,
+  //         link: "https://example.com/security",
+  //       },
+  //       {
+  //         name: "Integration",
+  //         desc: "Integration Description",
+  //         icon: <Workflow size={16} />,
+  //         link: "https://example.com/integration",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Solution",
+  //     subMenuHeading: ["overview", "Treads", "Insights"],
+  //     subMenu: [
+  //       {
+  //         name: "Event",
+  //         desc: "Event Description",
+  //         icon: <CalendarCheck size={16} />,
+  //         link: "https://example.com/events",
+  //       },
+  //       {
+  //         name: "Meetups",
+  //         desc: "Meetings Description",
+  //         icon: <Component size={16} />,
+  //         link: "https://example.com/meetup",
+  //       },
+  //       {
+  //         name: "Partners",
+  //         desc: "Partners Description",
+  //         icon: <Handshake size={16} />,
+  //         link: "https://example.com/partners",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: "Community",
+  //     subMenuHeading: ["overview", "Treads", "Insights"],
+  //     subMenu: [
+  //       {
+  //         name: "Forum",
+  //         desc: "Forum Description",
+  //         icon: <Strikethrough size={16} />,
+  //         link: "https://example.com/forum",
+  //       },
+  //       {
+  //         name: "Support",
+  //         desc: "Support Description",
+  //         icon: <HeartHandshake size={16} />,
+  //         link: "https://example.com/support",
+  //       },
+  //       {
+  //         name: "Resoures",
+  //         desc: "Resources Description",
+  //         icon: <LucideShieldPlus size={16} />,
+  //         link: "https://example.com/resources",
+  //       },
+  //     ],
+  //   },
+  // ];
+  // const navLinks = [
+  //   {
+  //     name: "Discover",
+  //     icon: <Users size={25} />,
+  //     subMenu: ["Overview", "Trends", "Insights"],
+  //     subMenuLinks: [
+  //       "https://example.com/overview",
+  //       "https://example.com/trends",
+  //       "https://example.com/insights",
+  //     ],
+  //   },
+  //   {
+  //     name: "Innovate",
+  //     icon: <Briefcase size={25} />,
+  //     subMenu: ["Tech", "Startups", "Research"],
+  //     subMenuLinks: [
+  //       "https://example.com/tech",
+  //       "https://example.com/startup",
+  //       "https://example.com/research",
+  //     ],
+  //   },
+  //   {
+  //     name: "DeWorld",
+  //     icon: <Code size={25} />,
+  //     subMenu: ["Development", "Security", "Integration"],
+  //     subMenuLinks: [
+  //       "https://example.com/development",
+  //       "https://example.com/security",
+  //       "https://example.com/integration",
+  //     ],
+  //   },
+  //   {
+  //     name: "Solution",
+  //     icon: <Network size={25} />,
+  //     subMenu: ["Events", "Meetups", "Partners"],
+  //     subMenuLinks: [
+  //       "https://example.com/events",
+  //       "https://example.com/meetups",
+  //       "https://example.com/partners",
+  //     ],
+  //   },
+  //   {
+  //     name: "Community",
+  //     icon: <Users size={25} />,
+  //     subMenu: ["Forum", "Support", "Resources"],
+  //     subMenuLinks: [
+  //       "https://example.com/forum",
+  //       "https://example.com/supprot",
+  //       "https://example.com/resources",
+  //     ],
+  //   },
+  // ];
   const toggleHoverMenu = (state) => {
     setIsHover(state);
   };
@@ -255,7 +811,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Navbar Links (Desktop) */}
 
         <motion.div>
-          <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
+          <motion.ul className=" lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
               const hasMenu = menu?.subMenu?.length > 0;
               return (
@@ -280,12 +836,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       onAnimationComplete={(def) => {
                         if (def === "exit") setDropdownOpen(null);
                       }}
-                      className={`absolute top-[5rem] p-[15px] rounded-[6px] flex items-center justify-center  w-fit backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
+                      className={`absolute top-[5rem] left-0 w-full p-[15px] rounded-[6px] flex items-center justify-center   backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
                         dropdownOpen === index
                           ? "opacity-100 visible pointer-events-auto delay-1000"
                           : "opacity-0 invisible pointer-events-none"
                       } bg-white/10`}>
-                      <div className="space-y-2 grid gap-4">
+                      <div className="space-y-2 grid grid-cols-2 gap-4">
                         {menu?.subMenu?.map((subMenu, index) => (
                           // <div
                           //   key={index}
@@ -329,6 +885,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             })}
           </motion.ul>
         </motion.div>
+        
       </div>
 
       {/* Right Side (Theme Toggle & Language Selector) */}
@@ -358,15 +915,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </div> */}
         {/* Language Selector */}
         <div className="relative group">
-          <button className="flex items-center px-2 md:px-4 py-2  lg:bg-neutral-300  lg:border-2 border-[#0085a8] lg:dark:bg-[#0085a8] rounded-md lg:hover:bg-neutral-400 lg:dark:hover:bg-neutral-600 transition-all">
+          <button className="flex items-center px-2 md:px-4 py-2     rounded-md transition-all">
             <Globe
               size={20}
               className="mr-2 lg:dark:text-neutral-300 dark:text-[#0085a8]"
             />
-            <span className="text-sm font-medium hidden lg:flex font-orbitron">
+            <span className="text-sm font-medium hidden  font-orbitron">
               Language
             </span>
-            <ChevronDown size={14} className="ml-2 hidden lg:flex" />
+            <ChevronDown size={14} className="ml-2 hidden " />
           </button>
 
           <div className="absolute right-0 mt-2 w-52 bg-white z-50 dark:border-none dark:bg-neutral-800 shadow-lg rounded hidden group-hover:block">

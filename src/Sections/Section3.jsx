@@ -42,7 +42,7 @@ const Section3 = () => {
           </div>
           <p className=" font-sans mt-5 lg:w-[500px] md:w-[70vw]  ">
             <span className="font-orbitron mb-5 font-bold">
-              Warp Around Wealth -- 8 Layers of Dynamic Finance.
+              Warp Around Wealth - 9 Layers of Dynamic Finance.
             </span>
             {"  "}
           </p>

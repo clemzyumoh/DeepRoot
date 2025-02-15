@@ -122,9 +122,9 @@ const InnoFiSection = () => {
     <section className="w-full bg-[#F0FAFD] dark:bg-gray-900 my-20 py-28 px-6 md:px-16 flex flex-col lg:flex-row items-center gap-10">
       {/* Content Section */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
-        <div className="flex justify-start items-start flex-col ">
+        <div className="flex justify-start lg:items-start items-center flex-col ">
           <AnimatedText
-            text="INNOFI:"
+            text="InnoFi:"
             animation="fade"
             as="h1"
             className="font-extrabold  lg:max-w-[600px] text-3xl leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-r from-[#fb7087] via-[#76dbfa] to-[#76dbfa] bg-clip-text font-orbitron text-transparent"
@@ -151,13 +151,13 @@ const InnoFiSection = () => {
           {innofiItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 hover:scale-105 bg-[#76dbfa] dark:text-neutral-900 rounded-lg shadow-md">
+              className="flex items-center gap-4 p-4 hover:scale-105  dark:text-neutral-200 rounded-lg shadow-md">
               <item.icon className="text-5xl text-[#fb7087]" />
               <div>
-                <h3 className="text-lg font-semibold font-orbitron text-gray-800 ">
+                <h3 className="text-lg font-semibold font-orbitron  ">
                   {item.title}
                 </h3>
-                <p className="text-gray-600  text-sm">{item.description}</p>
+                <p className="  text-sm">{item.description}</p>
               </div>
             </div>
           ))}

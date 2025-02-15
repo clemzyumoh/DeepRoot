@@ -27,7 +27,7 @@ const Section4 = () => {
         <div className=" flex justify-center lg:ml-16 items-start w-full  flex-col">
           <div className=" mt-6 ">
             <AnimatedText
-              text=" TelexCoin DEX: Unlock the future of Finance"
+              text=" TeleXcoin DeX: Unlock the future of Finance"
               animation="fade"
               as="h1"
               className="font-extrabold text-2xl text-center lg:text-start lg:text-4xl  mb-10  lg:leading-normal bg-gradient-to-r dark:bg-gradient-to-r from-[#0085a8] dark:via-[#ad1] dark:to-amber-400 via-blue-900 to-amber-600 bg-clip-text font-orbitron text-transparent"
@@ -52,10 +52,7 @@ const Section4 = () => {
               <FaSackDollar className="w-8 h-7 mr-4 dark:text-amber-600 text-[#0085a8]" />
             </AnimateItem>
             <p className="  lg:w-[500px] font-bold  font-sans md:w-[70vw]">
-              <span className="text-lg md:text-xl">
-                Seed, Earn, and Grow
-              </span>{" "}
-              
+              <span className="text-lg md:text-xl">Seed, Earn, and Grow</span>{" "}
             </p>
           </div>
 
@@ -71,7 +68,9 @@ const Section4 = () => {
               className="lg:direction-left  md:direction-right sm:direction-bottom">
               <FaGripfire className="w-10 h-10 dark:text-amber-600 text-[#0085a8]" />
             </AnimateItem>
-            <span className="text-lg ">The Hub for Trading & Connection.</span>{" "}
+            <span className="text-lg ">
+              The Hub for Trading, Strategies, & Connection.
+            </span>{" "}
           </p>
           <div className=" flex justify-center lg:mt-6 items-center flex-col md:flex-row">
             <button className="mt-6 font-bold lg:mt-10 bg-gradient-to-r from-[#0085a8] via-[#ad1]/60 dark:via-[#ad1]/70 dark:to-amber-600 to-amber-600 mr-6 px-6 font-orbitron py-3 text-center hover:bg-none hover:border-2 dark:border-[#0085a8] border-[#0085a8]  dark:hover:text-[#0085a8] transition-all   hover:ease-in-out  rounded-lg  text-lg  tracking-wider ">

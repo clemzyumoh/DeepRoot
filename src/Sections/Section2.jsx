@@ -48,7 +48,7 @@ const Section2 = () => {
                 Get DRC Token (Deeproots Coin):
               </h2>
               <p className="font-sans text-sm w-full">
-                Limited Supply, Distributed Over 25 Years - Here to Stay.
+                Limited Supply, Distributed Over 41 Years - Here to Stay.
               </p>
             </div>
           </div>
