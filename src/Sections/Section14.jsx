@@ -80,6 +80,7 @@ import { IoMdCheckmarkCircleOutline, IoMdEye } from "react-icons/io";
 import { CiWallet } from "react-icons/ci";
 import InnoFiImage from "../assets/vote.webp"; // Example image path
 import BlurEffect from "../components/BlurEffect";
+import AnimatedText from "../components/AnimationText";
 
 const innofiItems = [
   {
@@ -119,23 +120,22 @@ const innofiItems = [
 const InnoFiSection = () => {
   return (
     <section className="w-full bg-[#F0FAFD] dark:bg-gray-900 my-20 py-28 px-6 md:px-16 flex flex-col lg:flex-row items-center gap-10">
-      {/* Image Section */}
-      <div className="w-[800px] h-[500px] mt-36 hidden lg:flex justify-center py-72 items-center flex-col">
-        <img
-          src={InnoFiImage}
-          alt="InnoFi Innovation"
-          className="w-full rounded-lg shadow-lg"
-        />
-        <button className="mt-6 font-bold w-1/2 justify-center  lg:my-10 border-2 hidden md:flex hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#E19EA9] to-[#EEE1CC] mr-6 px-6 font-orbitron py-3 text-center hover:border-2 border-[#E19EA9] dark:hover:bg-none hover:text-[#E19EA9] transition-all hover:ease-in-out rounded-lg text-2xl tracking-wider">
-          VOTE
-        </button>
-      </div>
-
       {/* Content Section */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
-        <h2 className="text-3xl md:text-4xl mb-5 font-bold font-orbitron text-gray-800 dark:text-white">
-          INNOFI: FUND & VOTE Innovate DeWorld Projects by Milestone
-        </h2>
+        <div className="flex justify-start items-start flex-col ">
+          <AnimatedText
+            text="INNOFI:"
+            animation="fade"
+            as="h1"
+            className="font-extrabold  lg:max-w-[600px] text-3xl leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-r from-[#fb7087] via-[#76dbfa] to-[#76dbfa] bg-clip-text font-orbitron text-transparent"
+          />
+          <AnimatedText
+            text="FUND & VOTE DeWorld"
+            animation="fade"
+            as="h1"
+            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#fb7087] to-[#76dbfa] bg-clip-text font-orbitron text-transparent"
+          />
+        </div>
         <div className="w-full lg:hidden">
           <img
             src={InnoFiImage}
@@ -151,19 +151,17 @@ const InnoFiSection = () => {
           {innofiItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 p-4 hover:scale-105 bg-[#EEE1CC] dark:bg-gray-800 rounded-lg shadow-md">
-              <item.icon className="text-5xl text-[#E19EA9]" />
+              className="flex items-center gap-4 p-4 hover:scale-105 bg-[#76dbfa] dark:text-neutral-900 rounded-lg shadow-md">
+              <item.icon className="text-5xl text-[#fb7087]" />
               <div>
-                <h3 className="text-lg font-semibold font-orbitron text-gray-800 dark:text-white">
+                <h3 className="text-lg font-semibold font-orbitron text-gray-800 ">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  {item.description}
-                </p>
+                <p className="text-gray-600  text-sm">{item.description}</p>
               </div>
             </div>
           ))}
-          <button className="mt-6 font-bold  lg:mt- border-2 lg:hidden hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#E19EA9] to-[#EEE1CC] mr-6 px-6 font-orbitron py-3 text-center hover:border-2 border-[#E19EA9] dark:hover:bg-none hover:text-[#E19EA9] transition-all hover:ease-in-out rounded-lg text-lg tracking-wider">
+          <button className="mt-6 font-bold  lg:mt- border-2 lg:hidden hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#fb7087] to-[#76dbfa] mr-6 px-6 font-orbitron py-3 text-center hover:border-2 border-[#fb7087] dark:hover:bg-none hover:text-[#fb7087] transition-all hover:ease-in-out rounded-lg text-lg tracking-wider">
             VOTE
           </button>
         </motion.div>
@@ -173,6 +171,17 @@ const InnoFiSection = () => {
           color="#F0FAFD"
           className="w-60 h-60 absolute lg:bottom-16 lg:right-0 bg-gradient-to-r from-[#EEE1CC] to-[#F0FAFD] blur-[300px] lg:dark:blur-[250px] rounded-full"
         />
+      </div>
+      {/* Image Section */}
+      <div className="w-[800px] h-[500px] mt-36 hidden lg:flex justify-center py-72 items-center flex-col">
+        <img
+          src={InnoFiImage}
+          alt="InnoFi Innovation"
+          className="w-full rounded-lg shadow-lg"
+        />
+        <button className="mt-6 font-bold w-1/2 justify-center  lg:my-10 border-2 hidden md:flex hover:scale-105 dark:hover:border-2 dark:bg-gradient-to-r from-[#fb7087] to-[#76dbfa] mr-6 px-6  font-orbitron py-3 text-center hover:border-2 border-[#fb7087] dark:hover:bg-none hover:text-[#fb7087] transition-all hover:ease-in-out rounded-lg text-2xl tracking-wider">
+          VOTE
+        </button>
       </div>
     </section>
   );

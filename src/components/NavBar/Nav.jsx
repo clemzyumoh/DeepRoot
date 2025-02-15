@@ -387,7 +387,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </div>
           
         </div>
-        <FaMicrophone />
+        <FaMicrophone className="text-2xl "/>
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden mr-2 " onClick={() => setIsOpen(!isOpen)}>

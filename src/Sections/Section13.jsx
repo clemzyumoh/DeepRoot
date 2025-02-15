@@ -11,6 +11,7 @@ import {
 import MetaFabricImage from "../assets/metafabric.webp"; // Example image path
 import BlurEffect from "../components/BlurEffect";
 import AnimateItem from "../components/AnimationItem";
+import AnimatedText from "../components/AnimationText";
 
 const MetaFabricSection = () => {
   return (
@@ -21,19 +22,34 @@ const MetaFabricSection = () => {
         <img
           src={MetaFabricImage}
           alt="MetaFabric Fashion"
-          className="w-full h-auto rounded-2xl shadow-lg"
+          className="lg:w-[60vw] w-full h-auto rounded-2xl shadow-lg"
         />
       </AnimateItem>
       <BlurEffect
         color="#9a37f0"
         className="w-60 h-60 top-32 right-12 blur-[350px] md:blur-[200px] bg-[#b875f3] rounded-full absolute"
       />
-     
+
       <AnimateItem delay={0.2} direction="right">
-        <div className="w-full  text-gray-800 font-sans dark:text-gray-200">
-          <h2 className="text-2xl md:text-3xl font-bold font-orbitron mb-4">
-            MetaFabric: From Blockchain to Runway Your Style, Your NFT DeWorld
-          </h2>
+        <div className="lg:w-[40vw]  text-gray-800 font-sans dark:text-gray-200">
+          <AnimatedText
+            text="MetaFabric:"
+            animation="fade"
+            as="h1"
+            className="font-extrabold lg:max-w-[600px] text-3xl leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+          />
+          <AnimatedText
+            text="Blockchain to Runway Your Style,"
+            animation="fade"
+            as="h1"
+            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+          />
+          <AnimatedText
+            text=" Your NFT DeWorld"
+            animation="fade"
+            as="h1"
+            className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal mb-3 bg-gradient-to-l from-[#ee49fc] to-[#32d8fd] bg-clip-text font-orbitron text-transparent"
+          />
           <ul className="space-y-4 ">
             <li className="flex items-center gap-3 ">
               <ShoppingCart className="text-blue-500 w-12 h-12 mr-3" />
@@ -71,7 +87,7 @@ const MetaFabricSection = () => {
               </span>
             </li>
             <li className="flex items-center gap-3">
-              <Sparkles className="text-red-500 w-12 h-12 mr-3"/>
+              <Sparkles className="text-red-500 w-12 h-12 mr-3" />
               <span>
                 Lifestyle Redefined: Wear your creativity and show off your
                 digital art in the real world.
