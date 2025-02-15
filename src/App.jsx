@@ -14,6 +14,8 @@ import ComparisonSection from "./Sections/Section9";
 import Section10 from "./Sections/Section10";
 import Section11 from "./Sections/Section11";
 import Section12 from "./Sections/Section12";
+import Section13 from "./Sections/Section13";
+import InnoFiSection from "./Sections/Section14";
 // //import Section9 from "./Sections/Section9";
 // //import ComparisonSection from "./Sections/Section9";
 
@@ -103,6 +105,8 @@ function App() {
 
       <Section11 />
       <Section7 />
+      <Section13 />
+      <InnoFiSection />
       <Section10 />
     </main>
   );

@@ -18,7 +18,7 @@ const Her0Section = () => {
       </h1> */}
 
       <AnimatedText
-        text=" HELLO FUTURE BY DEEPROOTS"
+        text=" HELLO FUTURE BY DEEP ROOTS"
         animation="fade"
         as="h1"
         className="font-extrabold text-lg text-center md:text-4xl lg:text-6xl shadow-sm shadow-[#0085a8] leading-[55px] my-5 lg:leading-normal mb-3 bg-gradient-to-r from-[#AD1AAF] dark:via-[#0085a8] to-[#0085a8] dark:to-[#0085a8] bg-clip-text font-orbitron text-transparent"
@@ -42,7 +42,7 @@ const Her0Section = () => {
         NEW-LEVEL OF BLOCKCHAIN NETWORK
       </p> */}
       <AnimatedText
-        text=" FROM IMPOSSIBLE TO POSSIBLE - A PLATFORM FOR INNOVATIVE AND THE NEW-LEVEL OF BLOCKCHAIN NETWORK."
+        text=" FROM IMPOSSIBLE TO POSSIBLE - A PLATFORM FOR INNOVATIVE DEWORLD APPS ON THE FIRST TRULY DYNAMIC BLOCKCHAIN NETWORK."
         animation="typing"
         as="p"
         className=" md:text-xl text-sm font-sans tracking-wide md:tracking-wide text-center w-[90vw] my-10 lg:w-[60vw] leading-loose mx-2 md:px-5 md:w-[100vw]  "

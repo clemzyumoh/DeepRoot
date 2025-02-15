@@ -26,6 +26,7 @@ import {
   ListRestart,
   BookCheck,
 } from "lucide-react";
+import { FaMicrophone } from "react-icons/fa";
 import img from "../NavBar/logo.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
@@ -87,7 +88,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       ],
     },
     {
-      name: "Solution",
+      name: "DeWorld",
       subMenuHeading: ["overview", "Treads", "Insights"],
       subMenu: [
         {
@@ -111,7 +112,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       ],
     },
     {
-      name: "Network",
+      name: "Solution",
       subMenuHeading: ["overview", "Treads", "Insights"],
       subMenu: [
         {
@@ -181,7 +182,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       ],
     },
     {
-      name: "Solution",
+      name: "DeWorld",
       icon: <Code size={25} />,
       subMenu: ["Development", "Security", "Integration"],
       subMenuLinks: [
@@ -191,7 +192,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       ],
     },
     {
-      name: "Network",
+      name: "Solution",
       icon: <Network size={25} />,
       subMenu: ["Events", "Meetups", "Partners"],
       subMenuLinks: [
@@ -358,8 +359,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {/* Language Selector */}
         <div className="relative group">
           <button className="flex items-center px-2 md:px-4 py-2  lg:bg-neutral-300  lg:border-2 border-[#0085a8] lg:dark:bg-[#0085a8] rounded-md lg:hover:bg-neutral-400 lg:dark:hover:bg-neutral-600 transition-all">
-            <Globe size={20} className="mr-2 lg:dark:text-neutral-300 dark:text-[#0085a8]" />
-            <span className="text-sm font-medium hidden lg:flex font-orbitron">Language</span>
+            <Globe
+              size={20}
+              className="mr-2 lg:dark:text-neutral-300 dark:text-[#0085a8]"
+            />
+            <span className="text-sm font-medium hidden lg:flex font-orbitron">
+              Language
+            </span>
             <ChevronDown size={14} className="ml-2 hidden lg:flex" />
           </button>
 
@@ -379,7 +385,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </button>
             ))}
           </div>
+          
         </div>
+        <FaMicrophone />
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden mr-2 " onClick={() => setIsOpen(!isOpen)}>
@@ -395,7 +403,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             animate={{ x: 0 }} // Slide in to the screen
             exit={{ x: "-100%" }} // Slide back when closed
             transition={{ type: "spring", stiffness: 80, damping: 15 }}
-            className="lg:hidden absolute top-24 left-0 w-full h-screen text-neutral-950 pt-5  dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4">
+            className="lg:hidden absolute top-[70px] left-0 w-full h-screen text-neutral-950 pt-5  dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4">
             {navLinks.map((item, index) => (
               <motion.div key={index} className="relative">
                 <button
