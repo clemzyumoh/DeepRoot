@@ -21,14 +21,14 @@ const Footer = () => {
       {/* Section 2: Icons with Headers and Links (Grid Layout) */}
       <div className="grid grid-cols-1 w-full md:pt-16 my-16 md:ml-12  md:grid-cols-3 lg:grid-cols-5  items-start justify-center mt gap-8 ">
         {/* Rootverse Academy */}
-        <div className="flex justify-center flex-col items-start">
+        <div className="flex justify-center flex-col md:items-start items-center">
           <div className="flex justify-center  items-center my-5">
             <FaLeaf className="text-green-400 text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron md:text-[16px] lg:text-lg text-lg mb-2">
               Rootverse Academy
             </h3>
           </div>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 text-center md:text-left text-sm">
             <li>
               <a
                 href="#"
@@ -97,14 +97,14 @@ const Footer = () => {
         </div>
 
         {/* RootLab */}
-        <div className="flex justify-center flex-col items-start">
+        <div className="flex justify-center flex-col text-center md:items-start">
           <div className="flex justify-center items-center my-5">
             <FaFlask className="text-blue-400 text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron text-lg mb-2">
               RootLab
             </h3>
           </div>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 text-center md:text-left text-sm">
             <li>
               <a
                 href="#"
@@ -173,14 +173,14 @@ const Footer = () => {
         </div>
 
         {/* DeWorld */}
-        <div className="flex justify-center items-start flex-col">
+        <div className="flex justify-center items-center md:items-start flex-col">
           <div className="flex justify-center my-5 items-center">
             <FaGlobe className="text-yellow-400 text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron text-lg mb-2">
               DeWorld
             </h3>
           </div>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 md:text-left text-center text-sm">
             <li>
               <a
                 href="#"
@@ -257,14 +257,14 @@ const Footer = () => {
         </div>
 
         {/* RootIdentity */}
-        <div className="flex justify-center items-start flex-col">
+        <div className="flex justify-center items-center md:items-start flex-col">
           <div className="flex justify-center my-5 items-center">
             <FaLock className="text-red-400 text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron text-lg mb-2">
               RootIdentity
             </h3>
           </div>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 md:text-left text-center text-sm">
             <li>
               <a
                 href="#"
@@ -365,14 +365,14 @@ const Footer = () => {
         </div>
 
         {/* RootConnect */}
-        <div className="flex justify-center items-start flex-col">
+        <div className="flex justify-center md:items-start items-center flex-col">
           <div className="flex justify-center my-5 items-center">
             <FaLink className="text-amber-400 text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron text-lg mb-2">
               RootConnect
             </h3>
           </div>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 md:text-left text-center text-sm">
             <li>
               <a
                 href="#"
