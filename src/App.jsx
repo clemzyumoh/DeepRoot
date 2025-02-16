@@ -13,12 +13,13 @@ import Section7 from "./Sections/Section7";
 import ComparisonSection from "./Sections/Section9";
 import Section10 from "./Sections/Section10";
 import Section11 from "./Sections/Section11";
-import Section12 from "./Sections/Section12";
+//import Section12 from "./Sections/Section12";
 import Section13 from "./Sections/Section13";
 import InnoFiSection from "./Sections/Section14";
 import Section15 from "./Sections/Section15";
 import Section16 from "./Sections/Section16";
 import Section17 from "./Sections/Section17";
+import Drc from "./components/Drc";
 // //import Section9 from "./Sections/Section9";
 // //import ComparisonSection from "./Sections/Section9";
 
@@ -105,8 +106,8 @@ function App() {
       <InnoFiSection />
       <Section15 />
       <Section13 />
+      <Drc/>
       
-      <Section12 />
 
       <Section8 />
       <ComparisonSection />

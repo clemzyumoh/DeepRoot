@@ -885,7 +885,6 @@ const navLinks = [
             })}
           </motion.ul>
         </motion.div>
-        
       </div>
 
       {/* Right Side (Theme Toggle & Language Selector) */}
@@ -942,9 +941,8 @@ const navLinks = [
               </button>
             ))}
           </div>
-          
         </div>
-        <FaMicrophone className="text-2xl "/>
+        <FaMicrophone className="text-2xl " />
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden mr-2 " onClick={() => setIsOpen(!isOpen)}>
@@ -954,13 +952,13 @@ const navLinks = [
 
       <AnimatePresence>
         {/* Mobile Dropdown */}
-        {isOpen && (
+        {/* {isOpen && (
           <motion.div
             initial={{ x: "-100%" }} // Start off-screen to the left
             animate={{ x: 0 }} // Slide in to the screen
             exit={{ x: "-100%" }} // Slide back when closed
             transition={{ type: "spring", stiffness: 80, damping: 15 }}
-            className="lg:hidden absolute top-[70px] left-0 w-full h-screen text-neutral-950 pt-5  dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4">
+            className="lg:hidden absolute top-[70px] left-0 w-full h-screen overflow-y-auto text-neutral-950 pt-5  dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4">
             {navLinks.map((item, index) => (
               <motion.div key={index} className="relative">
                 <button
@@ -996,6 +994,58 @@ const navLinks = [
                       //   className="block w-full text-left px-4 py-2 bg-neutral-400 text-neutral-950 hover:scale-105 dark:bg-neutral-700 dark:text-neutral-200 font-orbitron hover:bg-neutral-600 rounded transition-all">
                       //   {subItem}
                       // </button>
+                      <a
+                        key={i}
+                        href={item.subMenuLinks[i]} // Add the corresponding link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full text-left px-4 py-2 bg-neutral-400 text-neutral-950 hover:scale-105 dark:bg-neutral-700 dark:text-neutral-200 font-orbitron hover:bg-neutral-600 rounded transition-all">
+                        {subItem}
+                      </a>
+                    ))}
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        )} */}
+        {isOpen && (
+          <motion.div
+            initial={{ x: "-100%" }} // Start off-screen to the left
+            animate={{ x: 0 }} // Slide in to the screen
+            exit={{ x: "-100%" }} // Slide back when closed
+            transition={{ type: "spring", stiffness: 80, damping: 15 }}
+            className="lg:hidden fixed top-[70px] left-0 w-full h-screen pb-20 text-neutral-950 pt-5 dark:bg-[#1d1f20] bg-neutral-300 dark:text-white p-4 space-y-4 overflow-y-auto max-h-screen">
+            {navLinks.map((item, index) => (
+              <motion.div key={index} className="relative">
+                <button
+                  className="flex items-center justify-between w-full text-[#0085a8] font-orbitron font-bold md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8] rounded transition-all"
+                  onClick={() =>
+                    setMobileDropdown(mobileDropdown === index ? null : index)
+                  }>
+                  {item.icon}
+                  {item.name}
+                  <ChevronDown
+                    size={25}
+                    className={`cursor-pointer transform transition-transform ${
+                      mobileDropdown === index ? "rotate-180" : "rotate-0"
+                    }`}
+                    onClick={() =>
+                      setMobileDropdown(mobileDropdown === index ? null : index)
+                    }
+                  />
+                </button>
+
+                {mobileDropdown === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{
+                      opacity: mobileDropdown === index ? 1 : 0,
+                      height: mobileDropdown === index ? "auto" : 0,
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="ml-4 mt-2 space-y-2">
+                    {item.subMenu.map((subItem, i) => (
                       <a
                         key={i}
                         href={item.subMenuLinks[i]} // Add the corresponding link
