@@ -14,7 +14,7 @@ import Card from "../components/Card";
 //import BookSlider from "../components/Slider";
 const Section3 = () => {
   return (
-    <main className="my-20 relative md:p-10  p-5">
+    <main id="address" className="my-20 relative md:p-10  p-5">
       <div className="flex justify-center flex-col md:flex-row items-center w-full">
         <div className="flex justify-start w-full text- md:items-center lg:ml-10 lg:items-start lg:text-start items-start flex-col">
           <AnimatedText

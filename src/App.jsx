@@ -20,6 +20,7 @@ import Section15 from "./Sections/Section15";
 import Section16 from "./Sections/Section16";
 import Section17 from "./Sections/Section17";
 import Drc from "./components/Drc";
+import Footer from "./components/Footer";
 // //import Section9 from "./Sections/Section9";
 // //import ComparisonSection from "./Sections/Section9";
 
@@ -117,6 +118,7 @@ function App() {
     
       <Section17 />
       <Section10 />
+      <Footer/>
     </main>
   );
 }
