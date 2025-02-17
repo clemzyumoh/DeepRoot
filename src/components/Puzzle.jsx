@@ -12,7 +12,11 @@ import {
   FaWallet,
   FaCoins,
 } from "react-icons/fa";
-
+import { LuVote } from "react-icons/lu";
+import { FaInnosoft } from "react-icons/fa";
+import { RiSlideshow3Line } from "react-icons/ri";
+import { GiClothes } from "react-icons/gi";
+import { FaGraduationCap } from "react-icons/fa6";
 const puzzleItems = [
   {
     icon: FaExchangeAlt,
@@ -42,7 +46,7 @@ const puzzleItems = [
     icon: FaGamepad,
     title: "GameFi with Rootopia",
     description: "Elevating blockchain gaming.",
-   // color: "text-[#FF00FF]",
+    // color: "text-[#FF00FF]",
   },
   {
     icon: FaSeedling,
@@ -72,6 +76,36 @@ const puzzleItems = [
     icon: FaGlobe,
     title: "Cross-Border Payments",
     description: "Fast, low-cost global transfers.",
+    //color: "text-[#40E0D0]",
+  },
+  {
+    icon: FaGraduationCap,
+    title: "Education & AI Tools",
+    description: "Learning, AI solutions, and tools.",
+    //color: "text-[#40E0D0]",
+  },
+  {
+    icon: GiClothes,
+    title: "NFTs & Fashion",
+    description: "Digital art, trends, and style.",
+    //color: "text-[#40E0D0]",
+  },
+  {
+    icon: RiSlideshow3Line,
+    title: "DeWorld Show",
+    description: "Web3 discussions and insights.",
+    //color: "text-[#40E0D0]",
+  },
+  {
+    icon: FaInnosoft,
+    title: "Fuel Innovation & More",
+    description: "Tech, creativity, and growth.",
+    //color: "text-[#40E0D0]",
+  },
+  {
+    icon: LuVote,
+    title: "Vote & Fund",
+    description: "Support, invest, and decide",
     //color: "text-[#40E0D0]",
   },
 ];

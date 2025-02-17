@@ -732,7 +732,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         {/* Navbar Links (Desktop) */}
 
-        {/* <motion.div>
+         <motion.div>
           <motion.ul className=" lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
               const hasMenu = menu?.subMenu?.length > 0;
@@ -744,7 +744,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   onHoverStart={() => setDropdownOpen(index)}
                   onHoverEnd={() => setDropdownOpen(null)}
                   className="group/link">
-                  <span className="flex justify-center items-center gap-2  font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl  hover:bg-[#0085A8]">
+                  <span className="flex justify-center items-center gap-2  font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]">
                     {menu.name}
                     {hasMenu && (
                       <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180  duration-200" />
@@ -758,12 +758,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       onAnimationComplete={(def) => {
                         if (def === "exit") setDropdownOpen(null);
                       }}
-                      className={`absolute top-[5rem] left-0 w-full p-[15px] rounded-[6px] flex items-center justify-center   backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
+                      className={`absolute top-[5rem] left-0 w-full p-[15px] rounded-[6px] pb-16 flex items-center justify-center   backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out ${
                         dropdownOpen === index
                           ? "opacity-100 visible pointer-events-auto delay-1000"
                           : "opacity-0 invisible pointer-events-none"
                       } bg-white/10`}>
-                      <div className="space-y-2 grid grid-cols-1 gap-4">
+                      <div className="space-y-2 grid grid-cols-2 gap-4">
                         {menu?.subMenu?.map((subMenu, index) => (
                           // <div
                           //   key={index}
@@ -806,7 +806,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               );
             })}
           </motion.ul>
-        </motion.div>  */}
+        </motion.div>  
         {/* <motion.div>
           <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
@@ -887,7 +887,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             })}
           </motion.ul>
         </motion.div> */}
-        <motion.div>
+        {/*<motion.div>
           <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
               const hasMenu = menu?.subMenu?.length > 0;
@@ -937,7 +937,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                               </h6>
                               <p className="text-sm">{subMenu.desc}</p>
                             </div>
-                            {/* Subsubmenu */}
+                          
                             {subMenu?.subSubMenu?.length > 0 && (
                               <motion.div
                                 initial={{ opacity: 0, x: -10 }}
@@ -974,7 +974,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               );
             })}
           </motion.ul>
-        </motion.div>
+        </motion.div>*/}
       </div>
 
       {/* Right Side (Theme Toggle & Language Selector) */}
@@ -1032,7 +1032,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             ))}
           </div>
         </div>
-        <FaMicrophone className="text-2xl " />
+        <FaMicrophone className="text-2xl text-red-500 hover:scale-125 hover:rotate-12 " />
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden mr-2 " onClick={() => setIsOpen(!isOpen)}>
