@@ -20,11 +20,11 @@ const Footer = () => {
         </h2>
       </div>
       {/* Section 2: Icons with Headers and Links (Grid Layout) */}
-      <div className="grid grid-cols-1 w-full md:pt-16 my-16 md:ml-12  md:grid-cols-3 lg:grid-cols-5  items-start justify-center mt gap-8 ">
+      <div className="grid grid-cols-1 w-full md:pt-16 mt-16 md:ml-12  md:grid-cols-3 lg:grid-cols-5  items-start justify-center gap-8 ">
         {/* Rootverse Academy */}
         <div className="flex justify-center flex-col md:items-start items-center">
           <div className="flex justify-center  items-center my-5">
-            <RiGraduationCapLine className="text-green-400 text-3xl mr-2" />
+            <RiGraduationCapLine className="text-green-400 text-4xl mr-2" />
             <h3 className="font-semibold font-orbitron md:text-[16px] lg:text-lg text-lg mb-2">
               RootAcademy
             </h3>
@@ -184,7 +184,7 @@ const Footer = () => {
         {/* DeWorld */}
         <div className="flex justify-center items-center md:items-start flex-col">
           <div className="flex justify-center my-5 items-center">
-            <FaGlobe className="text-yellow-400 text-3xl mr-2" />
+            <FaGlobe className="text-[#ad1aaf] text-3xl mr-2" />
             <h3 className="font-semibold font-orbitron text-lg mb-2">
               DeWorld
             </h3>
@@ -428,13 +428,15 @@ const Footer = () => {
         </div>
       </div>
       {/* Section 3: DeepQuest */}
-      <div className="text-center">
-        <div className="flex justify-center items-center">
-          <GiBullseye className="text-3xl mr-3 text-[#0085a8] " />
-          <h3 className="text-xl font-bold font-orbitron bg-gradient-to-r from-[#ad1aaf] bg-clip-text text-transparent to-[#0085a8] mb-2">
-            DeepQuest (Quiz Hub)
-          </h3>
-        </div>
+      <div className="text-center pt-20">
+        <a href="/#">
+          <div className="flex justify-center items-center">
+            <GiBullseye className="text-3xl mr-3 text-[#0085a8] " />
+            <h3 className="text-xl font-bold font-orbitron bg-gradient-to-r from-[#ad1aaf] bg-clip-text text-transparent to-[#0085a8] mb-2">
+              DeepQuest (Quiz Hub)
+            </h3>
+          </div>
+        </a>
         <p className="text-sm dark:text-gray-400">
           Our Story - Brands Assets - Code of Honor - Jobs - Private Policy -
           Term of Use - Cookie Policy - Public Relations

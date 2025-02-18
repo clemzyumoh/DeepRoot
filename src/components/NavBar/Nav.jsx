@@ -43,14 +43,17 @@ import { FaMicrophone } from "react-icons/fa";
 import img from "../NavBar/logo.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
+import { RiRoadMapFill } from "react-icons/ri";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null);
+  //const [dropdownOpen, setDropdownOpen] = useState(null);
   const [nestedDropdownOpen, setNestedDropdownOpen] = useState(null);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [subDropdownOpen, setSubDropdownOpen] = useState(false);
+
+  //const [hoverTimeout, setHoverTimeout] = useState(null);
 
   const Menus = [
     {
@@ -91,7 +94,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {
           name: "The Address Wallet – Your Earning Machine",
           desc: "Learn how to earn with The Address Wallet.",
-          icon: <Briefcase size={16} />,
+          icon: <Wallet size={16} />,
           link: "https://example.com/address-wallet",
           subSubMenu: [
             { name: "The Address", sectionId: "address" },
@@ -108,7 +111,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {
           name: "The foundation seat Member",
           desc: "Be Part of the Foundation.",
-          icon: <Briefcase size={16} />,
+          icon: <LucideShieldPlus size={16} />,
           link: "https://example.com/white-paper",
           subSubMenu: [
             { name: "The Address", sectionId: "address" },
@@ -125,7 +128,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {
           name: "White Paper",
           desc: "Explore DeWorld's white paper.",
-          icon: <Briefcase size={16} />,
+          icon: <Workflow size={16} />,
           link: "https://example.com/white-paper",
           subSubMenu: [
             { name: "The Address", sectionId: "address" },
@@ -142,7 +145,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         {
           name: "Roadmap",
           desc: "Check out DeWorld's roadmap.",
-          icon: <Briefcase size={16} />,
+          icon: <RiRoadMapFill size={16} />,
           link: "https://example.com/roadmap",
           subSubMenu: [
             { name: "The Address", sectionId: "address" },
@@ -690,25 +693,142 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   //     ],
   //   },
   // ];
-  const toggleHoverMenu = (state) => {
-    setIsHover(state);
+  // const toggleHoverMenu = (state) => {
+  //   setIsHover(state);
+  // };
+
+  // const subMenuAnimate = {
+  //   enter: {
+  //     opacity: 1,
+  //     rotateX: 0,
+  //     transition: { duration: 0.5 },
+  //   },
+  //   exit: {
+  //     // <-- Change "exist" to "exit"
+  //     opacity: 0,
+  //     rotateX: -15,
+  //     transition: {
+  //       duration: 0.5,
+  //     },
+  //   },
+  // };
+  // const subMenuAnimate = {
+  //   enter: {
+  //     opacity: 1,
+  //     y: 0,
+  //     display: "block",
+  //     transition: {
+  //       duration: 0.3,
+  //       ease: "easeOut",
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     y: -10,
+  //     transition: {
+  //       duration: 0.2,
+  //       ease: "easeIn",
+  //     },
+  //     transitionEnd: {
+  //       display: "none",
+  //     },
+  //   },
+  // };
+
+  // const subMenuAnimate = {
+  //   enter: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 0.3,
+  //       ease: "easeOut",
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     y: -10,
+  //     transition: {
+  //       duration: 0.5,
+  //       ease: "easeIn",
+  //     },
+  //   },
+  // };
+
+  // Handle mouse enter and leave events for the menu items
+  // const handleMouseEnter = (index) => {
+  //   setDropdownOpen(index); // Show dropdown when hovering over the menu item
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setDropdownOpen(null); // Hide dropdown when cursor leaves the item
+  // };
+
+  // const handleMouseEnter = (index) => {
+  //   clearTimeout(hoverTimeout);
+  //   setDropdownOpen(index);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   hoverTimeout = setTimeout(() => setDropdownOpen(null), 100); // Adjust delay as needed
+  
+  // const handleMouseEnter = (index) => {
+  //   clearTimeout(hoverTimeout);
+  //   setDropdownOpen(index);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   hoverTimeout = setTimeout(() => setDropdownOpen(null), 200); // Small delay to prevent flickering
+  // };
+// const handleMouseEnter = (index) => {
+//   setDropdownOpen(index);
+// };
+
+// const handleMouseLeave = (index) => {
+//   // Only close the dropdown if the current active one is the same as the one being left
+//   if (dropdownOpen === index) {
+//     setDropdownOpen(null);
+//   }
+// };
+
+  
+  const [dropdownOpen, setDropdownOpen] = useState({});
+
+  const handleMouseEnter = (index) => {
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [index]: true,
+    }));
   };
 
-  const subMenuAnimate = {
-    enter: {
-      opacity: 1,
-      rotateX: 0,
-      transition: { duration: 0.5 },
-    },
-    exit: {
-      // <-- Change "exist" to "exit"
-      opacity: 0,
-      rotateX: -15,
-      transition: {
-        duration: 0.5,
-      },
-    },
+  const handleMouseLeave = (index) => {
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [index]: false,
+    }));
   };
+
+const subMenuAnimate = {
+  enter: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+    display: "block",
+  },
+  exit: {
+    opacity: 0,
+    y: -10,
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+    transitionEnd: {
+      display: "none",
+    },
+  },
+};
 
   return (
     <motion.nav
@@ -722,7 +842,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="w-10  h-10 md:w-16 md:h-16 overflow-hidden rounded-full">
           <img
             src={img}
-            className="w-full h-full object-cover scale-150 "
+            className="w-full h-full object-cover scale-125 "
             alt="Logo"
           />
         </div>
@@ -732,24 +852,42 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         {/* Navbar Links (Desktop) */}
 
-         <motion.div>
-          <motion.ul className=" lg:flex justify-center ml-20 hidden items-center">
+        <motion.div>
+          <motion.ul className="   justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
               const hasMenu = menu?.subMenu?.length > 0;
               return (
                 <motion.li
                   key={index}
-                  onMouseEnter={() => setDropdownOpen(index)}
-                  onMouseLeave={() => setDropdownOpen(null)}
-                  onHoverStart={() => setDropdownOpen(index)}
-                  onHoverEnd={() => setDropdownOpen(null)}
-                  className="group/link">
-                  <span className="flex justify-center items-center gap-2  font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]">
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  className="group/link ">
+                  {/* <span
+                    className={`flex justify-center items-center gap-2  ${
+                      menu.name === "DeWorld"
+                        ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] bg-clip-text text-transparent "
+                        : ""
+                    }  font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]`}>
                     {menu.name}
                     {hasMenu && (
                       <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180  duration-200" />
                     )}
+                  </span> */}
+                  <span
+                    className={`flex justify-center items-center gap-2 font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]`}>
+                    <span
+                      className={`${
+                        menu.name === "DeWorld"
+                          ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] font-bold text-2xl bg-clip-text text-transparent"
+                          : ""
+                      }`}>
+                      {menu.name}
+                    </span>
+                    {hasMenu && (
+                      <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180  duration-200 " />
+                    )}
                   </span>
+
                   {hasMenu && (
                     <motion.div
                       initial="exit"
@@ -806,7 +944,130 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               );
             })}
           </motion.ul>
-        </motion.div>  
+          <motion.ul className=" justify-center ml-20 hidden items-center">
+            {Menus.map((menu, index) => {
+              const hasMenu = menu?.subMenu?.length > 0;
+              return (
+                <motion.li
+                  key={index}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  className="group/link ">
+                  <span
+                    className={`flex justify-center items-center gap-2 font-bold font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]`}>
+                    <span
+                      className={`${
+                        menu.name === "DeWorld"
+                          ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] font-bold text-2xl bg-clip-text text-transparent"
+                          : ""
+                      }`}>
+                      {menu.name}
+                    </span>
+                    {hasMenu && (
+                      <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
+                    )}
+                  </span>
+
+                  {hasMenu && (
+                    <motion.div
+                      initial="exit"
+                      variants={subMenuAnimate}
+                      animate={dropdownOpen === index ? "enter" : "exit"}
+                      // onMouseEnter={() => handleMouseEnter(index)} // Keep visible on hover
+                      // onMouseLeave={handleMouseLeave} // Hide when leaving dropdown
+                      className={`absolute top-[5rem] left-0 w-full p-[15px] rounded-[6px] pb-16 flex items-center justify-center backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out  ${
+                        dropdownOpen === index
+                          ? "opacity-100 visible pointer-events-auto delay-100"
+                          : "opacity-0 invisible pointer-events-none"
+                      } bg-white/10`}>
+                      <div className="space-y-2 grid grid-cols-2 gap-4">
+                        {menu?.subMenu?.map((subMenu, subIndex) => (
+                          <a
+                            key={subIndex}
+                            href={subMenu.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center transition duration-300">
+                            <div className="flex items-center mr-5 gap-3">
+                              <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white duration-300">
+                                {subMenu?.icon}
+                              </div>
+                            </div>
+                            <div className="text-start group-hover:text-neutral-900">
+                              <h6 className="font-bold font-sans">
+                                {subMenu.name}
+                              </h6>
+                              <p className="text-sm">{subMenu.desc}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </motion.li>
+              );
+            })}
+          </motion.ul>
+       <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
+  {Menus.map((menu, index) => {
+    const hasMenu = menu?.subMenu?.length > 0;
+
+    return (
+      <motion.li
+        key={index}
+        className="group/link "
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={() => handleMouseLeave(index)}>
+        <span className="flex justify-center items-center gap-2 font-bold relative font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]">
+          <span
+            className={`${
+              menu.name === "DeWorld"
+                ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] font-bold text-2xl bg-clip-text text-transparent"
+                : ""
+            }`}>
+            {menu.name}
+          </span>
+          {hasMenu && (
+            <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
+          )}
+        </span>
+
+        {hasMenu && (
+          <motion.div
+            variants={subMenuAnimate}
+            initial="exit"
+            animate={dropdownOpen[index] ? "enter" : "exit"}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+            className="absolute top-[6rem] left-0 w-full p-[15px] px-[50px] rounded-[6px] pb-16 flex items-center justify-center backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out dark:bg-[#1c1d20] bg-neutral-300">
+            <div className="space-y-2 grid grid-cols-2 gap-4">
+              {menu?.subMenu?.map((subMenu, subIndex) => (
+                <a
+                  key={subIndex}
+                  href={subMenu.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center transition duration-300">
+                  <div className="flex items-center mr-5 gap-3">
+                    <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white duration-300">
+                      {subMenu?.icon}
+                    </div>
+                  </div>
+                  <div className="text-start">
+                    <h6 className="font-bold font-sans">{subMenu.name}</h6>
+                    <p className="text-sm">{subMenu.desc}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </motion.li>
+    );
+  })}
+</motion.ul>
+
+        </motion.div>
         {/* <motion.div>
           <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
             {Menus.map((menu, index) => {
@@ -1109,7 +1370,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             {navLinks.map((item, index) => (
               <motion.div key={index} className="relative">
                 <button
-                  className="flex items-center justify-between w-full text-[#0085a8] font-orbitron font-bold md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8] rounded transition-all"
+                  className={`flex items-center justify-between w-full text-[#0085a8] font-orbitron font-bold md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8] rounded transition-all`}
                   onClick={() =>
                     setMobileDropdown(mobileDropdown === index ? null : index)
                   }>

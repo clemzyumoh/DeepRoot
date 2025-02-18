@@ -43,7 +43,7 @@ const CryptoGenerations = () => {
       {/* DRC (DeppRoots Coin) */}
       <div
         className={`flex flex-col items-center text-center p-6 rounded-lg  shadow-xl w-72 transition-all`}>
-        <h2 className="text-2xl font-bold mt-4">DeepRoots Coin (DRC)</h2>
+        <h2 className="text-2xl font-bold mt-4">DeepRoots (DRC)</h2>
       </div>
     </section>
   );
