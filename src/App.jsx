@@ -25,7 +25,6 @@
 // // //import Section9 from "./Sections/Section9";
 // // //import ComparisonSection from "./Sections/Section9";
 
-
 // // function App() {
 // //   const [darkMode, setDarkMode] = useState(
 // //     localStorage.getItem("theme") === "dark"
@@ -65,7 +64,6 @@
 // // }
 
 // // export default App;
-
 
 // function App() {
 //   const [darkMode, setDarkMode] = useState(true); // Default to dark mode
@@ -109,17 +107,16 @@
 //       <Section15 />
 //       <Section13 />
 //       <Drc/>
-      
 
 //       <Section8 />
 //       <ComparisonSection />
 
 //       <Section11 />
 //       <Section7 />
-    
+
 //       <Section17 />
 //       <Section10 />
-    
+
 //       <Footer/>
 //     </main>
 //   );
@@ -148,7 +145,8 @@ import Section16 from "./Sections/Section16";
 import Section17 from "./Sections/Section17";
 import Drc from "./components/Drc";
 import Footer from "./components/Footer";
-import img from "./assets/land1.png"
+import img from "./assets/land1.png";
+import banner from "./assets/land1.png";
 
 // List of allowed users
 const users = [
@@ -168,12 +166,10 @@ function App() {
   //   }
   // }, []);
 
-
   useEffect(() => {
     // Clear authentication state on reload
     setIsAuthenticated(false);
   }, []);
-
 
   // Handle login form submission
   const handleLogin = (event) => {
@@ -223,41 +219,80 @@ function App() {
   // If not authenticated, show the login form
   if (!isAuthenticated) {
     return (
-      <div className="flex flex-col lg:flex-row items-center lg:px-20 justify-center min-h-screen w-full bg-neutral-100 dark:bg-[#1c1d20] dark:text-neutral-200">
-        <h2 className="text-2xl lg:hidden md:text-4xl font-bold bg-gradient-to-bl from-[#ad1aaf] to-[#0085a8] bg-clip-text text-transparent font-orbitron mb-4">
-          DeepRoots Login
-        </h2>
-        <div className="lg:w-1/2 w-full px-3 lg:px-0">
-          <img src={img} alt="" className=" w-full rounded-md" />
-        </div>
+      // <div className="flex flex-col lg:flex-row items-center lg:px-20 justify-center min-h-screen w-full bg-neutral-100 dark:bg-[#1c1d20] dark:text-neutral-200">
+      //   <h2 className="text-2xl hidden md:text-4xl md:mb-8 font-bold bg-gradient-to-bl from-[#ad1aaf] to-[#0085a8] bg-clip-text text-transparent font-orbitron mb-4">
+      //     DEEPROOTS LOGIN
+      //   </h2>
+      //   <div className="lg:w-1/2 hidden w-full px-3 lg:px-0">
+      //     <img src={img} alt="" className=" w-full rounded-md" />
+      //   </div>
 
-        <div className="flex flex-col lg:w-1/2 w-full items-center mt-12 justify-center">
-          <h2 className="text-2xl hidden lg:block font-bold mb-8 bg-gradient-to-bl from-[#ad1aaf] to-[#0085a8] bg-clip-text text-transparent font-orbitron">
-            DeepRoots Login
-          </h2>
-          <form
-            onSubmit={handleLogin}
-            className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-md">
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              required
-              className=" p-2 mb-4 w-full rounded dark:bg-neutral-700 dark:text-white"
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-              className=" p-2 mb-4 w-full rounded  dark:bg-neutral-700 dark:text-white"
-            />
-            <button
-              type="submit"
-              className=" text-white p-2 bg-gradient-to-r rounded from-[#0085a8] to-[#ad1aaf] w-full">
-              Login
-            </button>
-          </form>
+      // <div className="flex flex-col lg:w-1/2 w-full items-center mt-12 justify-center">
+      //   <h2 className="text-2xl hidden  font-bold mb-8 bg-gradient-to-bl from-[#ad1aaf] to-[#0085a8] bg-clip-text text-transparent font-orbitron">
+      //     DEEPROOTS LOGIN
+      //   </h2>
+      //   <form
+      //     onSubmit={handleLogin}
+      //     className="bg-white dark:bg-neutral-800 p-6 rounded-lg hidden shadow-md">
+      //     <input
+      //       type="text"
+      //       name="username"
+      //       placeholder="Username"
+      //       required
+      //       className=" p-2 mb-4 w-full rounded dark:bg-neutral-700 dark:text-white"
+      //     />
+      //     <input
+      //       type="password"
+      //       name="password"
+      //       placeholder="Password"
+      //       required
+      //       className=" p-2 mb-4 w-full rounded  dark:bg-neutral-700 dark:text-white"
+      //     />
+      //     <button
+      //       type="submit"
+      //       className=" text-white p-2 bg-gradient-to-r rounded from-[#0085a8] to-[#ad1aaf] w-full">
+      //       Login
+      //     </button>
+      //   </form>
+      // </div>
+      //     <div
+      //           className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover  bg-center "
+      //           style={{ backgroundImage: `url(${banner})` }}></div>
+      // </div>
+      <div
+        className="w-full h-screen bg-cover flex justify-center items-center  bg-center "
+        style={{ backgroundImage: `url(${banner})` }}>
+        <div className="flex flex-col lg:w-1/2 w-full rounded-lg backdrop-blur-md shadow-md transition-opacity p-5 md:p-10 items-center  justify-center">
+          <div className="flex justify-center items-center flex-col bg-gray-800 md:p-8 rounded-md">
+            <div className="flex justify-center  items-center">
+              <h2 className="md:text-4xl shadow-2xl text-2xl font-bold  bg-gradient-to-bl from-[#ad1aaf] to-[#0085a8] bg-clip-text text-transparent font-orbitron">
+                DEEPROOTS LOGIN
+              </h2>
+            </div>
+            <form
+              onSubmit={handleLogin}
+              className="bg-transparent p-6 rounded-lg  shadow-md">
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                required
+                className=" p-2 mb-4 w-full rounded dark:bg-neutral-700 dark:text-white"
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+                className=" p-2 mb-4 w-full rounded  dark:bg-neutral-700 dark:text-white"
+              />
+              <button
+                type="submit"
+                className=" text-white p-2 bg-gradient-to-r rounded from-[#0085a8] to-[#ad1aaf] w-full">
+                Login
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );
@@ -273,7 +308,7 @@ function App() {
           className="w-60 h-60 absolute lg:top-0 lg:right-0 hidden bg-[#0085a8] blur-[300px] rounded-full"
         />
       </div>
-     
+
       {/* <button
         onClick={handleLogout}
         className="fixed top-4 lg:right-60 hidden md:left-64 md:top-7  bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 z-50 shadow-lg">
