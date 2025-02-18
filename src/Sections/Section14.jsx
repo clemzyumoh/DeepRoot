@@ -130,7 +130,7 @@ const InnoFiSection = () => {
             className="font-extrabold  lg:max-w-[600px] text-3xl leading-[40px]  lg:text-start lg:text-4xl   lg:leading-normal bg-gradient-to-r from-[#fb7087] via-[#76dbfa] to-[#76dbfa] bg-clip-text font-orbitron text-transparent"
           />
           <AnimatedText
-            text="FUND & VOTE DeWorld"
+            text="VOTE & FUND DeWorld"
             animation="fade"
             as="h1"
             className="font-extrabold lg:max-w-[600px] text-xl leading-[40px]  lg:text-start lg:text-2xl   lg:leading-normal bg-gradient-to-l from-[#fb7087] to-[#76dbfa] bg-clip-text font-orbitron text-transparent"

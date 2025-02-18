@@ -842,7 +842,11 @@ const subMenuAnimate = {
         <div className="w-10  h-10 md:w-16 md:h-16 overflow-hidden rounded-full">
           <img
             src={img}
-            className="w-full h-full object-cover scale-125 "
+            className="w-full h-full cursor-pointer object-cover scale-125 "
+            onClick={() => {
+              const heroSection = document.getElementById("home"); // Make sure HeroSection has id="home"
+              heroSection?.scrollIntoView({ behavior: "smooth" });
+            }}
             alt="Logo"
           />
         </div>
@@ -1008,65 +1012,66 @@ const subMenuAnimate = {
               );
             })}
           </motion.ul>
-       <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
-  {Menus.map((menu, index) => {
-    const hasMenu = menu?.subMenu?.length > 0;
+          <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
+            {Menus.map((menu, index) => {
+              const hasMenu = menu?.subMenu?.length > 0;
 
-    return (
-      <motion.li
-        key={index}
-        className="group/link "
-        onMouseEnter={() => handleMouseEnter(index)}
-        onMouseLeave={() => handleMouseLeave(index)}>
-        <span className="flex justify-center items-center gap-2 font-bold relative font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]">
-          <span
-            className={`${
-              menu.name === "DeWorld"
-                ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] font-bold text-2xl bg-clip-text text-transparent"
-                : ""
-            }`}>
-            {menu.name}
-          </span>
-          {hasMenu && (
-            <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
-          )}
-        </span>
+              return (
+                <motion.li
+                  key={index}
+                  className="group/link "
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={() => handleMouseLeave(index)}>
+                  <span className="flex justify-center items-center gap-2 font-bold relative font-orbitron text-lg cursor-pointer px-3 py-3 rounded-xl hover:border-b-2 hover:border-[#0085A8]">
+                    <span
+                      className={`${
+                        menu.name === "DeWorld"
+                          ? "bg-gradient-to-r from-[#0085a8] to-[#ad1aaf] font-bold text-2xl bg-clip-text text-transparent"
+                          : ""
+                      }`}>
+                      {menu.name}
+                    </span>
+                    {hasMenu && (
+                      <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
+                    )}
+                  </span>
 
-        {hasMenu && (
-          <motion.div
-            variants={subMenuAnimate}
-            initial="exit"
-            animate={dropdownOpen[index] ? "enter" : "exit"}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-            className="absolute top-[6rem] left-0 w-full p-[15px] px-[50px] rounded-[6px] pb-16 flex items-center justify-center backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out dark:bg-[#1c1d20] bg-neutral-300">
-            <div className="space-y-2 grid grid-cols-2 gap-4">
-              {menu?.subMenu?.map((subMenu, subIndex) => (
-                <a
-                  key={subIndex}
-                  href={subMenu.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center transition duration-300">
-                  <div className="flex items-center mr-5 gap-3">
-                    <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white duration-300">
-                      {subMenu?.icon}
-                    </div>
-                  </div>
-                  <div className="text-start">
-                    <h6 className="font-bold font-sans">{subMenu.name}</h6>
-                    <p className="text-sm">{subMenu.desc}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </motion.li>
-    );
-  })}
-</motion.ul>
-
+                  {hasMenu && (
+                    <motion.div
+                      variants={subMenuAnimate}
+                      initial="exit"
+                      animate={dropdownOpen[index] ? "enter" : "exit"}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={() => handleMouseLeave(index)}
+                      className="absolute top-[6rem] left-0 w-full p-[15px] px-[50px] rounded-[6px] pb-16 flex items-center justify-center backdrop-blur-md shadow-md transition-opacity duration-700 ease-in-out dark:bg-[#1c1d20] bg-neutral-300">
+                      <div className="space-y-2 grid grid-cols-2 gap-4">
+                        {menu?.subMenu?.map((subMenu, subIndex) => (
+                          <a
+                            key={subIndex}
+                            href={subMenu.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative group cursor-pointer p-2 hover:bg-white/20 rounded-md flex items-center transition duration-300">
+                            <div className="flex items-center mr-5 gap-3">
+                              <div className="bg-white/5 p-2 rounded-md text-gray-300 text-lg group-hover/link:bg-neutral-900 bg-neutral-950 group-hover:text-neutral-950 dark:group-hover:text-gray-900 group-hover:bg-white duration-300">
+                                {subMenu?.icon}
+                              </div>
+                            </div>
+                            <div className="text-start">
+                              <h6 className="font-bold font-sans">
+                                {subMenu.name}
+                              </h6>
+                              <p className="text-sm">{subMenu.desc}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </motion.li>
+              );
+            })}
+          </motion.ul>
         </motion.div>
         {/* <motion.div>
           <motion.ul className="lg:flex justify-center ml-20 hidden items-center">
@@ -1370,7 +1375,7 @@ const subMenuAnimate = {
             {navLinks.map((item, index) => (
               <motion.div key={index} className="relative">
                 <button
-                  className={`flex items-center justify-between w-full text-[#0085a8] font-orbitron font-bold md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8] rounded transition-all`}
+                  className={`flex items-center justify-between w-full text-[#0085a8] font-orbitron font-extrabold text-xl md:my-10 hover:scale-105 mb-8 text-center px-4 py-2 hover:border-2 hover:border-[#0085a8] rounded transition-all`}
                   onClick={() =>
                     setMobileDropdown(mobileDropdown === index ? null : index)
                   }>

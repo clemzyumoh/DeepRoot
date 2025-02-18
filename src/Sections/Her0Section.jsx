@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Her0Section = () => {
   return (
-    <motion.main className="flex justify-center z-10 relative flex-col lg:scale-x-105 md:mt-[88px] mt-[70px] lg:mt-[93px]  items-center mb-20">
+    <motion.main id="home" className="flex justify-center z-10 relative flex-col lg:scale-x-105 md:mt-[88px] mt-[70px] lg:mt-[93px]  items-center mb-20">
       <div
         className="w-full h-48 md:h-[500px] lg:h-[750px]  bg-cover  bg-center "
         style={{ backgroundImage: `url(${banner})` }}></div>

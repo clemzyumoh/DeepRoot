@@ -10,11 +10,21 @@ const Footer = () => {
     <footer className="dark:bg-black bg-gray-300 dark:text-white py-10 px-5 relative flex w-full justify-center items-center flex-col space-y-10">
       {/* Section 1: Logo and Name */}
       <div className="flex justify-center absolute top-9 left-8 items-center">
-        <img
+        {/* <img
           src={img}
           alt="logo-footer"
           className="w-10 h-10 md:w-14 md:h-14 rounded-full mr-5 shadow-[2px_2px_5px_#ad1aaf,-2px_-2px_5px_#0085a8] dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aaf]"
+        /> */}
+        <img
+          src={img}
+          alt="logo-footer"
+          onClick={() => {
+            const heroSection = document.getElementById("home"); // Make sure HeroSection has id="home"
+            heroSection?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="cursor-pointer w-10 h-10 md:w-14 md:h-14 rounded-full mr-5 shadow-[2px_2px_5px_#ad1aaf,-2px_-2px_5px_#0085a8] dark:shadow-[2px_2px_2px_#0085a8,-2px_-2px_2px_#ad1aaf]"
         />
+
         <h2 className="md:text-3xl text-2xl font-orbitron font-bold bg-gradient-to-r from-[#AD1AAF] via-[#0085a8] to-[#0085a8] dark:bg-gradient-to-r dark:from-[#AD1AAF] dark:via-[#0085a8] to-inherit[#0085a8] dark:to-neutral-500 bg-clip-text  text-transparent">
           DEEPROOTS
         </h2>
